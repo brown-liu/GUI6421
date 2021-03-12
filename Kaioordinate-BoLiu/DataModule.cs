@@ -39,6 +39,7 @@ namespace Kaioordinate_BoLiu
             Whanau = dataSetKaioordinate.Tables["Whanau"];
             WhanauAdapter.Fill(dataSetKaioordinate);
 
+            dataSetKaioordinate.EnforceConstraints = true;
         }
 
         private void oleDbDataAdapter2_RowUpdated(object sender, System.Data.OleDb.OleDbRowUpdatedEventArgs e)
@@ -51,6 +52,10 @@ namespace Kaioordinate_BoLiu
             Close();
         }
 
+        public void UpdateKaiTable()
+        {
+            KaiTableAdaptor.Update(Kai);
+        }
 
     }
 }

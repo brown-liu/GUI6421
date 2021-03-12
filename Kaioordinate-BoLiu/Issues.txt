@@ -1,0 +1,8 @@
+﻿
+1. in kai form, the data bind has data from event table. Kai table only have event id. how to link ?
+
+2. how to show designer while work on code
+
+3. In A1 Task2, para 4 and the list 'The Up, Down, Return, Update and Delete buttons are disabled, and the list should
+disappear ' list disapear or whole box disappear
+

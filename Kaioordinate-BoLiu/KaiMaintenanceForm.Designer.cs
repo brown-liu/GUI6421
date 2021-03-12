@@ -30,17 +30,17 @@ namespace Kaioordinate_BoLiu
         private void InitializeComponent()
         {
             this.kaiMaintinanceListBox = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelKaiId = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.EventInputBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.KaiIdInputBox = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.eventDisplay = new System.Windows.Forms.TextBox();
+            this.kaiNameDisplay = new System.Windows.Forms.TextBox();
+            this.kaiIDdislay = new System.Windows.Forms.TextBox();
+            this.preparationDisplay = new System.Windows.Forms.TextBox();
+            this.preparationTimeDisplay = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.serveQuantityDisplay = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.kaiUpBtn = new FontAwesome.Sharp.IconButton();
             this.kaiDownBtn = new FontAwesome.Sharp.IconButton();
@@ -48,6 +48,9 @@ namespace Kaioordinate_BoLiu
             this.kaiUpdateBtn = new FontAwesome.Sharp.IconButton();
             this.kaiDeleteBtn = new FontAwesome.Sharp.IconButton();
             this.kaiReturnBtn = new FontAwesome.Sharp.IconButton();
+            this.addKaiSaveBtn = new FontAwesome.Sharp.IconButton();
+            this.addKaiCancelBtn = new FontAwesome.Sharp.IconButton();
+            this.kaiAddCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // kaiMaintinanceListBox
@@ -58,16 +61,16 @@ namespace Kaioordinate_BoLiu
             this.kaiMaintinanceListBox.Size = new System.Drawing.Size(193, 264);
             this.kaiMaintinanceListBox.TabIndex = 0;
             // 
-            // label1
+            // labelKaiId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(357, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Kai ID";
+            this.labelKaiId.AutoSize = true;
+            this.labelKaiId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelKaiId.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelKaiId.Location = new System.Drawing.Point(357, 52);
+            this.labelKaiId.Name = "labelKaiId";
+            this.labelKaiId.Size = new System.Drawing.Size(58, 24);
+            this.labelKaiId.TabIndex = 1;
+            this.labelKaiId.Text = "Kai ID";
             // 
             // label2
             // 
@@ -91,40 +94,45 @@ namespace Kaioordinate_BoLiu
             this.label3.TabIndex = 3;
             this.label3.Text = "Kai Name";
             // 
-            // EventInputBox
+            // eventDisplay
             // 
-            this.EventInputBox.Location = new System.Drawing.Point(456, 97);
-            this.EventInputBox.Name = "EventInputBox";
-            this.EventInputBox.Size = new System.Drawing.Size(213, 20);
-            this.EventInputBox.TabIndex = 5;
+            this.eventDisplay.Location = new System.Drawing.Point(456, 97);
+            this.eventDisplay.Name = "eventDisplay";
+            this.eventDisplay.ReadOnly = true;
+            this.eventDisplay.Size = new System.Drawing.Size(148, 20);
+            this.eventDisplay.TabIndex = 5;
             // 
-            // textBox2
+            // kaiNameDisplay
             // 
-            this.textBox2.Location = new System.Drawing.Point(456, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 20);
-            this.textBox2.TabIndex = 6;
+            this.kaiNameDisplay.Location = new System.Drawing.Point(456, 143);
+            this.kaiNameDisplay.Name = "kaiNameDisplay";
+            this.kaiNameDisplay.ReadOnly = true;
+            this.kaiNameDisplay.Size = new System.Drawing.Size(148, 20);
+            this.kaiNameDisplay.TabIndex = 6;
             // 
-            // KaiIdInputBox
+            // kaiIDdislay
             // 
-            this.KaiIdInputBox.Location = new System.Drawing.Point(456, 52);
-            this.KaiIdInputBox.Name = "KaiIdInputBox";
-            this.KaiIdInputBox.Size = new System.Drawing.Size(148, 20);
-            this.KaiIdInputBox.TabIndex = 7;
+            this.kaiIDdislay.Location = new System.Drawing.Point(456, 52);
+            this.kaiIDdislay.Name = "kaiIDdislay";
+            this.kaiIDdislay.ReadOnly = true;
+            this.kaiIDdislay.Size = new System.Drawing.Size(148, 20);
+            this.kaiIDdislay.TabIndex = 7;
             // 
-            // textBox4
+            // preparationDisplay
             // 
-            this.textBox4.Location = new System.Drawing.Point(456, 192);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 20);
-            this.textBox4.TabIndex = 8;
+            this.preparationDisplay.Location = new System.Drawing.Point(456, 192);
+            this.preparationDisplay.Name = "preparationDisplay";
+            this.preparationDisplay.ReadOnly = true;
+            this.preparationDisplay.Size = new System.Drawing.Size(148, 20);
+            this.preparationDisplay.TabIndex = 8;
             // 
-            // textBox5
+            // preparationTimeDisplay
             // 
-            this.textBox5.Location = new System.Drawing.Point(456, 242);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 20);
-            this.textBox5.TabIndex = 9;
+            this.preparationTimeDisplay.Location = new System.Drawing.Point(456, 242);
+            this.preparationTimeDisplay.Name = "preparationTimeDisplay";
+            this.preparationTimeDisplay.ReadOnly = true;
+            this.preparationTimeDisplay.Size = new System.Drawing.Size(148, 20);
+            this.preparationTimeDisplay.TabIndex = 9;
             // 
             // label4
             // 
@@ -148,12 +156,13 @@ namespace Kaioordinate_BoLiu
             this.label5.TabIndex = 11;
             this.label5.Text = "Preparation Time";
             // 
-            // textBox6
+            // serveQuantityDisplay
             // 
-            this.textBox6.Location = new System.Drawing.Point(456, 289);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(148, 20);
-            this.textBox6.TabIndex = 12;
+            this.serveQuantityDisplay.Location = new System.Drawing.Point(456, 289);
+            this.serveQuantityDisplay.Name = "serveQuantityDisplay";
+            this.serveQuantityDisplay.ReadOnly = true;
+            this.serveQuantityDisplay.Size = new System.Drawing.Size(148, 20);
+            this.serveQuantityDisplay.TabIndex = 12;
             // 
             // label6
             // 
@@ -171,46 +180,49 @@ namespace Kaioordinate_BoLiu
             this.kaiUpBtn.IconChar = FontAwesome.Sharp.IconChar.CaretSquareUp;
             this.kaiUpBtn.IconColor = System.Drawing.Color.Black;
             this.kaiUpBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kaiUpBtn.Location = new System.Drawing.Point(39, 352);
+            this.kaiUpBtn.Location = new System.Drawing.Point(40, 399);
             this.kaiUpBtn.Name = "kaiUpBtn";
             this.kaiUpBtn.Size = new System.Drawing.Size(87, 78);
             this.kaiUpBtn.TabIndex = 14;
             this.kaiUpBtn.Text = "UP";
             this.kaiUpBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kaiUpBtn.UseVisualStyleBackColor = true;
+            this.kaiUpBtn.Click += new System.EventHandler(this.kaiUpBtn_Click);
             // 
             // kaiDownBtn
             // 
             this.kaiDownBtn.IconChar = FontAwesome.Sharp.IconChar.CaretSquareDown;
             this.kaiDownBtn.IconColor = System.Drawing.Color.Black;
             this.kaiDownBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kaiDownBtn.Location = new System.Drawing.Point(132, 352);
+            this.kaiDownBtn.Location = new System.Drawing.Point(133, 399);
             this.kaiDownBtn.Name = "kaiDownBtn";
             this.kaiDownBtn.Size = new System.Drawing.Size(87, 78);
             this.kaiDownBtn.TabIndex = 15;
             this.kaiDownBtn.Text = "DOWN";
             this.kaiDownBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kaiDownBtn.UseVisualStyleBackColor = true;
+            this.kaiDownBtn.Click += new System.EventHandler(this.kaiDownBtn_Click);
             // 
             // kaiAddBtn
             // 
             this.kaiAddBtn.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.kaiAddBtn.IconColor = System.Drawing.Color.Black;
             this.kaiAddBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kaiAddBtn.Location = new System.Drawing.Point(268, 352);
+            this.kaiAddBtn.Location = new System.Drawing.Point(269, 399);
             this.kaiAddBtn.Name = "kaiAddBtn";
             this.kaiAddBtn.Size = new System.Drawing.Size(87, 78);
             this.kaiAddBtn.TabIndex = 16;
             this.kaiAddBtn.Text = "ADD";
             this.kaiAddBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kaiAddBtn.UseVisualStyleBackColor = true;
+            this.kaiAddBtn.Click += new System.EventHandler(this.kaiAddBtn_Click);
             // 
             // kaiUpdateBtn
             // 
             this.kaiUpdateBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.kaiUpdateBtn.IconColor = System.Drawing.Color.Black;
             this.kaiUpdateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kaiUpdateBtn.Location = new System.Drawing.Point(361, 352);
+            this.kaiUpdateBtn.Location = new System.Drawing.Point(362, 399);
             this.kaiUpdateBtn.Name = "kaiUpdateBtn";
             this.kaiUpdateBtn.Size = new System.Drawing.Size(87, 78);
             this.kaiUpdateBtn.TabIndex = 17;
@@ -223,7 +235,7 @@ namespace Kaioordinate_BoLiu
             this.kaiDeleteBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.kaiDeleteBtn.IconColor = System.Drawing.Color.Black;
             this.kaiDeleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kaiDeleteBtn.Location = new System.Drawing.Point(456, 352);
+            this.kaiDeleteBtn.Location = new System.Drawing.Point(457, 399);
             this.kaiDeleteBtn.Name = "kaiDeleteBtn";
             this.kaiDeleteBtn.Size = new System.Drawing.Size(87, 78);
             this.kaiDeleteBtn.TabIndex = 18;
@@ -236,7 +248,7 @@ namespace Kaioordinate_BoLiu
             this.kaiReturnBtn.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.kaiReturnBtn.IconColor = System.Drawing.Color.Black;
             this.kaiReturnBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kaiReturnBtn.Location = new System.Drawing.Point(583, 352);
+            this.kaiReturnBtn.Location = new System.Drawing.Point(584, 399);
             this.kaiReturnBtn.Name = "kaiReturnBtn";
             this.kaiReturnBtn.Size = new System.Drawing.Size(87, 78);
             this.kaiReturnBtn.TabIndex = 19;
@@ -245,12 +257,59 @@ namespace Kaioordinate_BoLiu
             this.kaiReturnBtn.UseVisualStyleBackColor = true;
             this.kaiReturnBtn.Click += new System.EventHandler(this.kaiReturnBtn_Click);
             // 
+            // addKaiSaveBtn
+            // 
+            this.addKaiSaveBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.addKaiSaveBtn.IconColor = System.Drawing.Color.Black;
+            this.addKaiSaveBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.addKaiSaveBtn.IconSize = 25;
+            this.addKaiSaveBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addKaiSaveBtn.Location = new System.Drawing.Point(432, 337);
+            this.addKaiSaveBtn.Name = "addKaiSaveBtn";
+            this.addKaiSaveBtn.Size = new System.Drawing.Size(92, 35);
+            this.addKaiSaveBtn.TabIndex = 20;
+            this.addKaiSaveBtn.Text = "SAVE";
+            this.addKaiSaveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addKaiSaveBtn.UseVisualStyleBackColor = true;
+            this.addKaiSaveBtn.Visible = false;
+            this.addKaiSaveBtn.Click += new System.EventHandler(this.addKaiSaveBtn_Click);
+            // 
+            // addKaiCancelBtn
+            // 
+            this.addKaiCancelBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
+            this.addKaiCancelBtn.IconColor = System.Drawing.Color.Black;
+            this.addKaiCancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.addKaiCancelBtn.IconSize = 26;
+            this.addKaiCancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addKaiCancelBtn.Location = new System.Drawing.Point(559, 337);
+            this.addKaiCancelBtn.Name = "addKaiCancelBtn";
+            this.addKaiCancelBtn.Size = new System.Drawing.Size(93, 35);
+            this.addKaiCancelBtn.TabIndex = 21;
+            this.addKaiCancelBtn.Text = "CANCEL";
+            this.addKaiCancelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addKaiCancelBtn.UseVisualStyleBackColor = true;
+            this.addKaiCancelBtn.Visible = false;
+            this.addKaiCancelBtn.Click += new System.EventHandler(this.addKaiCancelBtn_Click);
+            // 
+            // kaiAddCheckBox
+            // 
+            this.kaiAddCheckBox.AutoSize = true;
+            this.kaiAddCheckBox.Location = new System.Drawing.Point(456, 198);
+            this.kaiAddCheckBox.Name = "kaiAddCheckBox";
+            this.kaiAddCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.kaiAddCheckBox.TabIndex = 22;
+            this.kaiAddCheckBox.UseVisualStyleBackColor = true;
+            this.kaiAddCheckBox.Visible = false;
+            // 
             // KaiMaintenanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(73)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(712, 462);
+            this.ClientSize = new System.Drawing.Size(741, 515);
+            this.Controls.Add(this.kaiAddCheckBox);
+            this.Controls.Add(this.addKaiCancelBtn);
+            this.Controls.Add(this.addKaiSaveBtn);
             this.Controls.Add(this.kaiReturnBtn);
             this.Controls.Add(this.kaiDeleteBtn);
             this.Controls.Add(this.kaiUpdateBtn);
@@ -258,17 +317,17 @@ namespace Kaioordinate_BoLiu
             this.Controls.Add(this.kaiDownBtn);
             this.Controls.Add(this.kaiUpBtn);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.serveQuantityDisplay);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.KaiIdInputBox);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.EventInputBox);
+            this.Controls.Add(this.preparationTimeDisplay);
+            this.Controls.Add(this.preparationDisplay);
+            this.Controls.Add(this.kaiIDdislay);
+            this.Controls.Add(this.kaiNameDisplay);
+            this.Controls.Add(this.eventDisplay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelKaiId);
             this.Controls.Add(this.kaiMaintinanceListBox);
             this.Name = "KaiMaintenanceForm";
             this.Text = "Kai Maintenance";
@@ -280,17 +339,17 @@ namespace Kaioordinate_BoLiu
         #endregion
 
         private System.Windows.Forms.ListBox kaiMaintinanceListBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelKaiId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox EventInputBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox KaiIdInputBox;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox eventDisplay;
+        private System.Windows.Forms.TextBox kaiNameDisplay;
+        private System.Windows.Forms.TextBox kaiIDdislay;
+        private System.Windows.Forms.TextBox preparationDisplay;
+        private System.Windows.Forms.TextBox preparationTimeDisplay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox serveQuantityDisplay;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton kaiUpBtn;
         private FontAwesome.Sharp.IconButton kaiDownBtn;
@@ -298,5 +357,8 @@ namespace Kaioordinate_BoLiu
         private FontAwesome.Sharp.IconButton kaiUpdateBtn;
         private FontAwesome.Sharp.IconButton kaiDeleteBtn;
         private FontAwesome.Sharp.IconButton kaiReturnBtn;
+        private FontAwesome.Sharp.IconButton addKaiSaveBtn;
+        private FontAwesome.Sharp.IconButton addKaiCancelBtn;
+        private System.Windows.Forms.CheckBox kaiAddCheckBox;
     }
 }
