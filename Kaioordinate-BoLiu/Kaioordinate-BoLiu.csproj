@@ -55,6 +55,11 @@
     <Compile Include="DataModule.Designer.cs">
       <DependentUpon>DataModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetKaioordinate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKaioordinate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EventManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +71,6 @@
     </Compile>
     <Compile Include="KaiMaintenanceForm.Designer.cs">
       <DependentUpon>KaiMaintenanceForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kaioordinateDBSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kaioordinateDBSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LocationManagementForm.cs">
       <SubType>Form</SubType>
@@ -137,16 +137,16 @@
     <EmbeddedResource Include="WhanauManagementForm.resx">
       <DependentUpon>WhanauManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="kaioordinateDBSet.xsc">
-      <DependentUpon>kaioordinateDBSet.xsd</DependentUpon>
+    <None Include="DataSetKaioordinate.xsc">
+      <DependentUpon>DataSetKaioordinate.xsd</DependentUpon>
     </None>
-    <None Include="kaioordinateDBSet.xsd">
+    <None Include="DataSetKaioordinate.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kaioordinateDBSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetKaioordinate.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="kaioordinateDBSet.xss">
-      <DependentUpon>kaioordinateDBSet.xsd</DependentUpon>
+    <None Include="DataSetKaioordinate.xss">
+      <DependentUpon>DataSetKaioordinate.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -174,9 +174,6 @@
     <Content Include="image\logo_250.png" />
     <Content Include="image\logo_500.png" />
     <Content Include="image\profile.png" />
-    <Content Include="kai-oordinate.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

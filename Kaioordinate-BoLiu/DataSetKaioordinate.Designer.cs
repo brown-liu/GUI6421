@@ -20,9 +20,9 @@ namespace Kaioordinate_BoLiu {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("KaioordinateDbSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetKaioordinate")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class KaioordinateDbSet : global::System.Data.DataSet {
+    public partial class DataSetKaioordinate : global::System.Data.DataSet {
         
         private EVENTDataTable tableEVENT;
         
@@ -38,7 +38,7 @@ namespace Kaioordinate_BoLiu {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public KaioordinateDbSet() {
+        public DataSetKaioordinate() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -49,7 +49,7 @@ namespace Kaioordinate_BoLiu {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected KaioordinateDbSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetKaioordinate(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -187,7 +187,7 @@ namespace Kaioordinate_BoLiu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            KaioordinateDbSet cln = ((KaioordinateDbSet)(base.Clone()));
+            DataSetKaioordinate cln = ((DataSetKaioordinate)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -295,9 +295,9 @@ namespace Kaioordinate_BoLiu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "KaioordinateDbSet";
+            this.DataSetName = "DataSetKaioordinate";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/KaioordinateDbSet.xsd";
+            this.Namespace = "http://tempuri.org/DataSetKaioordinate.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEVENT = new EVENTDataTable();
@@ -353,7 +353,7 @@ namespace Kaioordinate_BoLiu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            KaioordinateDbSet ds = new KaioordinateDbSet();
+            DataSetKaioordinate ds = new DataSetKaioordinate();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -713,7 +713,7 @@ namespace Kaioordinate_BoLiu {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                KaioordinateDbSet ds = new KaioordinateDbSet();
+                DataSetKaioordinate ds = new DataSetKaioordinate();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -787,14 +787,6 @@ namespace Kaioordinate_BoLiu {
             
             private global::System.Data.DataColumn columnKaiPreparation;
             
-            private global::System.Data.DataColumn columnExpr1;
-            
-            private global::System.Data.DataColumn columnExpr2;
-            
-            private global::System.Data.DataColumn columnExpr3;
-            
-            private global::System.Data.DataColumn columnExpr4;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public EVENTREGISTERDataTable() {
@@ -862,38 +854,6 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
-                get {
-                    return this.columnExpr1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr2Column {
-                get {
-                    return this.columnExpr2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr3Column {
-                get {
-                    return this.columnExpr3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr4Column {
-                get {
-                    return this.columnExpr4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -929,17 +889,13 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EVENTREGISTERRow AddEVENTREGISTERRow(int WhanauID, int EventID, bool KaiPreparation, int Expr2, int Expr3, bool Expr4) {
+            public EVENTREGISTERRow AddEVENTREGISTERRow(int WhanauID, int EventID, bool KaiPreparation) {
                 EVENTREGISTERRow rowEVENTREGISTERRow = ((EVENTREGISTERRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         WhanauID,
                         EventID,
-                        KaiPreparation,
-                        null,
-                        Expr2,
-                        Expr3,
-                        Expr4};
+                        KaiPreparation};
                 rowEVENTREGISTERRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEVENTREGISTERRow);
                 return rowEVENTREGISTERRow;
@@ -973,10 +929,6 @@ namespace Kaioordinate_BoLiu {
                 this.columnWhanauID = base.Columns["WhanauID"];
                 this.columnEventID = base.Columns["EventID"];
                 this.columnKaiPreparation = base.Columns["KaiPreparation"];
-                this.columnExpr1 = base.Columns["Expr1"];
-                this.columnExpr2 = base.Columns["Expr2"];
-                this.columnExpr3 = base.Columns["Expr3"];
-                this.columnExpr4 = base.Columns["Expr4"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -990,20 +942,11 @@ namespace Kaioordinate_BoLiu {
                 base.Columns.Add(this.columnEventID);
                 this.columnKaiPreparation = new global::System.Data.DataColumn("KaiPreparation", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKaiPreparation);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
-                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr2);
-                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr3);
-                this.columnExpr4 = new global::System.Data.DataColumn("Expr4", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr4);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRegistrationID}, true));
                 this.columnRegistrationID.AutoIncrement = true;
                 this.columnRegistrationID.AllowDBNull = false;
                 this.columnRegistrationID.Unique = true;
-                this.columnExpr1.AutoIncrement = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1071,7 +1014,7 @@ namespace Kaioordinate_BoLiu {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                KaioordinateDbSet ds = new KaioordinateDbSet();
+                DataSetKaioordinate ds = new DataSetKaioordinate();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1137,8 +1080,6 @@ namespace Kaioordinate_BoLiu {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class KAIDataTable : global::System.Data.TypedTableBase<KAIRow> {
             
-            private global::System.Data.DataColumn columnExpr1;
-            
             private global::System.Data.DataColumn columnKaiID;
             
             private global::System.Data.DataColumn columnEventID;
@@ -1150,6 +1091,8 @@ namespace Kaioordinate_BoLiu {
             private global::System.Data.DataColumn columnPreparationMinutes;
             
             private global::System.Data.DataColumn columnServeQuantity;
+            
+            private global::System.Data.DataColumn columnExpr1;
             
             private global::System.Data.DataColumn columnExpr2;
             
@@ -1192,14 +1135,6 @@ namespace Kaioordinate_BoLiu {
             protected KAIDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
-                get {
-                    return this.columnExpr1;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1247,6 +1182,14 @@ namespace Kaioordinate_BoLiu {
             public global::System.Data.DataColumn ServeQuantityColumn {
                 get {
                     return this.columnServeQuantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
                 }
             }
             
@@ -1327,16 +1270,16 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KAIRow AddKAIRow(int EventID, string KaiName, bool PreparationRequired, int PreparationMinutes, int ServeQuantity, string Expr2, int Expr3, bool Expr4, int Expr5, int Expr6) {
+            public KAIRow AddKAIRow(int EventID, string KaiName, bool PreparationRequired, int PreparationMinutes, int ServeQuantity, int Expr2, string Expr3, bool Expr4, int Expr5, int Expr6) {
                 KAIRow rowKAIRow = ((KAIRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         null,
                         EventID,
                         KaiName,
                         PreparationRequired,
                         PreparationMinutes,
                         ServeQuantity,
+                        null,
                         Expr2,
                         Expr3,
                         Expr4,
@@ -1349,9 +1292,9 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KAIRow FindByExpr1(int Expr1) {
+            public KAIRow FindByKaiID(int KaiID) {
                 return ((KAIRow)(this.Rows.Find(new object[] {
-                            Expr1})));
+                            KaiID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1371,13 +1314,13 @@ namespace Kaioordinate_BoLiu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnExpr1 = base.Columns["Expr1"];
                 this.columnKaiID = base.Columns["KaiID"];
                 this.columnEventID = base.Columns["EventID"];
                 this.columnKaiName = base.Columns["KaiName"];
                 this.columnPreparationRequired = base.Columns["PreparationRequired"];
                 this.columnPreparationMinutes = base.Columns["PreparationMinutes"];
                 this.columnServeQuantity = base.Columns["ServeQuantity"];
+                this.columnExpr1 = base.Columns["Expr1"];
                 this.columnExpr2 = base.Columns["Expr2"];
                 this.columnExpr3 = base.Columns["Expr3"];
                 this.columnExpr4 = base.Columns["Expr4"];
@@ -1388,8 +1331,6 @@ namespace Kaioordinate_BoLiu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
                 this.columnKaiID = new global::System.Data.DataColumn("KaiID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKaiID);
                 this.columnEventID = new global::System.Data.DataColumn("EventID", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1402,9 +1343,11 @@ namespace Kaioordinate_BoLiu {
                 base.Columns.Add(this.columnPreparationMinutes);
                 this.columnServeQuantity = new global::System.Data.DataColumn("ServeQuantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnServeQuantity);
-                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpr2);
-                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpr3);
                 this.columnExpr4 = new global::System.Data.DataColumn("Expr4", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpr4);
@@ -1413,13 +1356,13 @@ namespace Kaioordinate_BoLiu {
                 this.columnExpr6 = new global::System.Data.DataColumn("Expr6", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpr6);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnExpr1}, true));
-                this.columnExpr1.AutoIncrement = true;
-                this.columnExpr1.AllowDBNull = false;
-                this.columnExpr1.Unique = true;
+                                this.columnKaiID}, true));
                 this.columnKaiID.AutoIncrement = true;
+                this.columnKaiID.AllowDBNull = false;
+                this.columnKaiID.Unique = true;
                 this.columnKaiName.MaxLength = 255;
-                this.columnExpr2.MaxLength = 255;
+                this.columnExpr1.AutoIncrement = true;
+                this.columnExpr3.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1487,7 +1430,7 @@ namespace Kaioordinate_BoLiu {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                KaioordinateDbSet ds = new KaioordinateDbSet();
+                DataSetKaioordinate ds = new DataSetKaioordinate();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1559,12 +1502,6 @@ namespace Kaioordinate_BoLiu {
             
             private global::System.Data.DataColumn columnAddress;
             
-            private global::System.Data.DataColumn columnExpr1;
-            
-            private global::System.Data.DataColumn columnExpr2;
-            
-            private global::System.Data.DataColumn columnExpr3;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public LOCATIONDataTable() {
@@ -1624,30 +1561,6 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
-                get {
-                    return this.columnExpr1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr2Column {
-                get {
-                    return this.columnExpr2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr3Column {
-                get {
-                    return this.columnExpr3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1683,15 +1596,12 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LOCATIONRow AddLOCATIONRow(string LocationName, string Address, string Expr2, string Expr3) {
+            public LOCATIONRow AddLOCATIONRow(string LocationName, string Address) {
                 LOCATIONRow rowLOCATIONRow = ((LOCATIONRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         LocationName,
-                        Address,
-                        null,
-                        Expr2,
-                        Expr3};
+                        Address};
                 rowLOCATIONRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLOCATIONRow);
                 return rowLOCATIONRow;
@@ -1724,9 +1634,6 @@ namespace Kaioordinate_BoLiu {
                 this.columnLocationID = base.Columns["LocationID"];
                 this.columnLocationName = base.Columns["LocationName"];
                 this.columnAddress = base.Columns["Address"];
-                this.columnExpr1 = base.Columns["Expr1"];
-                this.columnExpr2 = base.Columns["Expr2"];
-                this.columnExpr3 = base.Columns["Expr3"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1738,12 +1645,6 @@ namespace Kaioordinate_BoLiu {
                 base.Columns.Add(this.columnLocationName);
                 this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAddress);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
-                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr2);
-                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr3);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnLocationID}, true));
                 this.columnLocationID.AutoIncrement = true;
@@ -1751,9 +1652,6 @@ namespace Kaioordinate_BoLiu {
                 this.columnLocationID.Unique = true;
                 this.columnLocationName.MaxLength = 255;
                 this.columnAddress.MaxLength = 255;
-                this.columnExpr1.AutoIncrement = true;
-                this.columnExpr2.MaxLength = 255;
-                this.columnExpr3.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1821,7 +1719,7 @@ namespace Kaioordinate_BoLiu {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                KaioordinateDbSet ds = new KaioordinateDbSet();
+                DataSetKaioordinate ds = new DataSetKaioordinate();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2155,7 +2053,7 @@ namespace Kaioordinate_BoLiu {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                KaioordinateDbSet ds = new KaioordinateDbSet();
+                DataSetKaioordinate ds = new DataSetKaioordinate();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2511,70 +2409,6 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Expr1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableEVENTREGISTER.Expr1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr1\' in table \'EVENTREGISTER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEVENTREGISTER.Expr1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Expr2 {
-                get {
-                    try {
-                        return ((int)(this[this.tableEVENTREGISTER.Expr2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr2\' in table \'EVENTREGISTER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEVENTREGISTER.Expr2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Expr3 {
-                get {
-                    try {
-                        return ((int)(this[this.tableEVENTREGISTER.Expr3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr3\' in table \'EVENTREGISTER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEVENTREGISTER.Expr3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Expr4 {
-                get {
-                    try {
-                        return ((bool)(this[this.tableEVENTREGISTER.Expr4Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr4\' in table \'EVENTREGISTER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEVENTREGISTER.Expr4Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWhanauIDNull() {
                 return this.IsNull(this.tableEVENTREGISTER.WhanauIDColumn);
             }
@@ -2608,54 +2442,6 @@ namespace Kaioordinate_BoLiu {
             public void SetKaiPreparationNull() {
                 this[this.tableEVENTREGISTER.KaiPreparationColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr1Null() {
-                return this.IsNull(this.tableEVENTREGISTER.Expr1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr1Null() {
-                this[this.tableEVENTREGISTER.Expr1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr2Null() {
-                return this.IsNull(this.tableEVENTREGISTER.Expr2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr2Null() {
-                this[this.tableEVENTREGISTER.Expr2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr3Null() {
-                return this.IsNull(this.tableEVENTREGISTER.Expr3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr3Null() {
-                this[this.tableEVENTREGISTER.Expr3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr4Null() {
-                return this.IsNull(this.tableEVENTREGISTER.Expr4Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr4Null() {
-                this[this.tableEVENTREGISTER.Expr4Column] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -2674,25 +2460,9 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Expr1 {
-                get {
-                    return ((int)(this[this.tableKAI.Expr1Column]));
-                }
-                set {
-                    this[this.tableKAI.Expr1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int KaiID {
                 get {
-                    try {
-                        return ((int)(this[this.tableKAI.KaiIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KaiID\' in table \'KAI\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableKAI.KaiIDColumn]));
                 }
                 set {
                     this[this.tableKAI.KaiIDColumn] = value;
@@ -2781,10 +2551,26 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Expr2 {
+            public int Expr1 {
                 get {
                     try {
-                        return ((string)(this[this.tableKAI.Expr2Column]));
+                        return ((int)(this[this.tableKAI.Expr1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expr1\' in table \'KAI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKAI.Expr1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Expr2 {
+                get {
+                    try {
+                        return ((int)(this[this.tableKAI.Expr2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Expr2\' in table \'KAI\' is DBNull.", e);
@@ -2797,10 +2583,10 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Expr3 {
+            public string Expr3 {
                 get {
                     try {
-                        return ((int)(this[this.tableKAI.Expr3Column]));
+                        return ((string)(this[this.tableKAI.Expr3Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Expr3\' in table \'KAI\' is DBNull.", e);
@@ -2861,18 +2647,6 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsKaiIDNull() {
-                return this.IsNull(this.tableKAI.KaiIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetKaiIDNull() {
-                this[this.tableKAI.KaiIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEventIDNull() {
                 return this.IsNull(this.tableKAI.EventIDColumn);
             }
@@ -2929,6 +2703,18 @@ namespace Kaioordinate_BoLiu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetServeQuantityNull() {
                 this[this.tableKAI.ServeQuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpr1Null() {
+                return this.IsNull(this.tableKAI.Expr1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpr1Null() {
+                this[this.tableKAI.Expr1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3051,54 +2837,6 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Expr1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableLOCATION.Expr1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr1\' in table \'LOCATION\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLOCATION.Expr1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Expr2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableLOCATION.Expr2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr2\' in table \'LOCATION\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLOCATION.Expr2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Expr3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableLOCATION.Expr3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expr3\' in table \'LOCATION\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLOCATION.Expr3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsLocationNameNull() {
                 return this.IsNull(this.tableLOCATION.LocationNameColumn);
             }
@@ -3119,42 +2857,6 @@ namespace Kaioordinate_BoLiu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetAddressNull() {
                 this[this.tableLOCATION.AddressColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr1Null() {
-                return this.IsNull(this.tableLOCATION.Expr1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr1Null() {
-                this[this.tableLOCATION.Expr1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr2Null() {
-                return this.IsNull(this.tableLOCATION.Expr2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr2Null() {
-                this[this.tableLOCATION.Expr2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr3Null() {
-                return this.IsNull(this.tableLOCATION.Expr3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr3Null() {
-                this[this.tableLOCATION.Expr3Column] = global::System.Convert.DBNull;
             }
         }
         

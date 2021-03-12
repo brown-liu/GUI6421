@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Kaioordinate_BoLiu
 {
     public partial class DataModule : Form
@@ -21,12 +22,22 @@ namespace Kaioordinate_BoLiu
         public DataModule()
         {
             InitializeComponent();
-            kaioordinateDBSet1.EnforceConstraints = false;
-            Kai = kaioordinateDBSet1.Tables["KAI"];
-            Event = kaioordinateDBSet1.Tables["Event"];
-            EventRegister = kaioordinateDBSet1.Tables["EventRegister"];
-            LocationTable = kaioordinateDBSet1.Tables["Location"];
-            Whanau = kaioordinateDBSet1.Tables["Whanau"];
+            dataSetKaioordinate.EnforceConstraints = false;
+
+            Kai = dataSetKaioordinate.Tables["KAI"];
+            KaiTableAdaptor.Fill(dataSetKaioordinate);
+
+            Event = dataSetKaioordinate.Tables["Event"];
+            EventRegistorAdaptor.Fill(dataSetKaioordinate);
+
+            EventRegister = dataSetKaioordinate.Tables["EventRegister"];
+            EventRegistorAdaptor.Fill(dataSetKaioordinate);
+
+            LocationTable = dataSetKaioordinate.Tables["Location"];
+            LocationAdaptor.Fill(dataSetKaioordinate);
+
+            Whanau = dataSetKaioordinate.Tables["Whanau"];
+            WhanauAdapter.Fill(dataSetKaioordinate);
 
         }
 
@@ -40,6 +51,6 @@ namespace Kaioordinate_BoLiu
             Close();
         }
 
-     
+
     }
 }

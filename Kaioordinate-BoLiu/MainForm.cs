@@ -13,47 +13,63 @@ namespace Kaioordinate_BoLiu
     public partial class MainForm : Form
     {
         private DataModule _dataModule;
+        private ReportForm _reportForm;
+        private WhanauManagementForm whanauManagementForm;
+        private KaiMaintenanceForm kaiMaintenanceForm;
+        private EventManagementForm eventManagementForm;
+        private LocationManagementForm locationManagement;
+        private RegistrationManagementForm registrationManagementForm;
         public MainForm()
         {
             InitializeComponent();
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            //create the data module and load the dataset
             _dataModule = new DataModule();
         }
 
         private void reportBtn_Click(object sender, EventArgs e)
         {
-            var report = new ReportForm();
-            report.ShowDialog();
+            _reportForm = new ReportForm();
+            _reportForm.ShowDialog();
         }
 
         private void whanauBtn_Click(object sender, EventArgs e)
         {
-            var whanau = new WhanauManagementForm();
-            whanau.ShowDialog();
+            whanauManagementForm = new WhanauManagementForm();
+            whanauManagementForm.ShowDialog();
 
         }
 
         private void kai_Click(object sender, EventArgs e)
         {
-            var kaiForm = new KaiMaintenanceForm(_dataModule,this);
-            kaiForm.ShowDialog();
+            if (kaiMaintenanceForm == null)
+            { 
+                kaiMaintenanceForm = new KaiMaintenanceForm(_dataModule, this);
+            }
+           
+            kaiMaintenanceForm.ShowDialog();
         }
 
         private void eventBtn_Click(object sender, EventArgs e)
         {
-            var events = new EventManagementForm();
-            events.ShowDialog();
+            eventManagementForm = new EventManagementForm();
+            eventManagementForm.ShowDialog();
         }
 
         private void locationBtn_Click(object sender, EventArgs e)
         {
-            var location = new LocationManagementForm();
-            location.ShowDialog();
+            locationManagement = new LocationManagementForm();
+            locationManagement.ShowDialog();
         }
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-            var registration = new RegistrationManagementForm();
-            registration.ShowDialog();
+            registrationManagementForm = new RegistrationManagementForm();
+            registrationManagementForm.ShowDialog();
         }
 
         private void homeExistBtn_Click(object sender, EventArgs e)

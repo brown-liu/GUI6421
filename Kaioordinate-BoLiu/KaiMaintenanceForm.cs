@@ -27,13 +27,12 @@ namespace Kaioordinate_BoLiu
 
         public void BindControls()
         {
+            //KaiIdInputBox.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiId");
+            kaiMaintinanceListBox.DataSource = _dataModule.dataSetKaioordinate;
 
-            kaiMaintinanceListBox.DataSource = _dataModule.kaioordinateDBSet1;
-          
-                kaiMaintinanceListBox.DisplayMember ="KAI.KAINAME";
-            kaiMaintinanceListBox.ValueMember = "KAI.KAINAME";
-            _currencyManager = (CurrencyManager)this.BindingContext[_dataModule.kaioordinateDBSet1, "KAI"];
-
+            kaiMaintinanceListBox.DisplayMember = "KAI.KaiName";
+            kaiMaintinanceListBox.ValueMember = "KAI.KaiName";
+            _currencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
 
         }
 

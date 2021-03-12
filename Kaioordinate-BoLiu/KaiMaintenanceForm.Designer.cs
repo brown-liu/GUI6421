@@ -33,9 +33,9 @@ namespace Kaioordinate_BoLiu
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EventInputBox = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.KaiIdInputBox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -91,12 +91,12 @@ namespace Kaioordinate_BoLiu
             this.label3.TabIndex = 3;
             this.label3.Text = "Kai Name";
             // 
-            // textBox1
+            // EventInputBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(456, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 5;
+            this.EventInputBox.Location = new System.Drawing.Point(456, 97);
+            this.EventInputBox.Name = "EventInputBox";
+            this.EventInputBox.Size = new System.Drawing.Size(213, 20);
+            this.EventInputBox.TabIndex = 5;
             // 
             // textBox2
             // 
@@ -105,12 +105,12 @@ namespace Kaioordinate_BoLiu
             this.textBox2.Size = new System.Drawing.Size(214, 20);
             this.textBox2.TabIndex = 6;
             // 
-            // textBox3
+            // KaiIdInputBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(456, 52);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 20);
-            this.textBox3.TabIndex = 7;
+            this.KaiIdInputBox.Location = new System.Drawing.Point(456, 52);
+            this.KaiIdInputBox.Name = "KaiIdInputBox";
+            this.KaiIdInputBox.Size = new System.Drawing.Size(148, 20);
+            this.KaiIdInputBox.TabIndex = 7;
             // 
             // textBox4
             // 
@@ -263,9 +263,9 @@ namespace Kaioordinate_BoLiu
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.KaiIdInputBox);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.EventInputBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -283,9 +283,9 @@ namespace Kaioordinate_BoLiu
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox EventInputBox;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox KaiIdInputBox;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
