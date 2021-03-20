@@ -1357,9 +1357,12 @@ namespace Kaioordinate_BoLiu {
                 base.Columns.Add(this.columnExpr6);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnKaiID}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnEventID}, false));
                 this.columnKaiID.AutoIncrement = true;
                 this.columnKaiID.AllowDBNull = false;
                 this.columnKaiID.Unique = true;
+                this.columnEventID.Unique = true;
                 this.columnKaiName.MaxLength = 255;
                 this.columnExpr1.AutoIncrement = true;
                 this.columnExpr3.MaxLength = 255;

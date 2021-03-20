@@ -56,6 +56,9 @@
     <Compile Include="DataModule.Designer.cs">
       <DependentUpon>DataModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetKaioordinate.cs">
+      <DependentUpon>DataSetKaioordinate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetKaioordinate.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

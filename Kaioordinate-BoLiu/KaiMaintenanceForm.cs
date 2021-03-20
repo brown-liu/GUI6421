@@ -14,13 +14,16 @@ namespace Kaioordinate_BoLiu
     {
         private DataModule _dataModule;
         private readonly MainForm _mainForm;
-        private CurrencyManager _currencyManager;
+        private CurrencyManager _kaiCurrencyManager;
+        private CurrencyManager _eventCurrencyManager;
 
         public KaiMaintenanceForm(DataModule dataModule, MainForm mainForm)
         {
             InitializeComponent();
             _dataModule = dataModule;
             _mainForm = mainForm;
+            _eventCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "Event"];
+            _kaiCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
             BindControls();
         }
 
@@ -28,7 +31,10 @@ namespace Kaioordinate_BoLiu
         public void BindControls()
         {
             kaiIDdislay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiId");
+
+        
             eventDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Event.EventName");
+
             preparationDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationRequired");
             preparationTimeDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationMinutes");
             kaiNameDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiName");
@@ -37,9 +43,10 @@ namespace Kaioordinate_BoLiu
 
 
             kaiMaintinanceListBox.DataSource = _dataModule.dataSetKaioordinate;
+   
             kaiMaintinanceListBox.DisplayMember = "KAI.KaiName";
-            kaiMaintinanceListBox.ValueMember = "KAI.KaiName";
-            _currencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
+            kaiMaintinanceListBox.ValueMember = "KAI.KaiID";
+
 
         }
 
@@ -51,17 +58,17 @@ namespace Kaioordinate_BoLiu
 
         private void kaiUpBtn_Click(object sender, EventArgs e)
         {
-            if (_currencyManager.Position > 0)
+            if (_kaiCurrencyManager.Position > 0)
             {
-                --_currencyManager.Position;
+                --_kaiCurrencyManager.Position;
             }
         }
 
         private void kaiDownBtn_Click(object sender, EventArgs e)
         {
-            if (_currencyManager.Position < _currencyManager.Count - 1)
+            if (_kaiCurrencyManager.Position < _kaiCurrencyManager.Count - 1)
             {
-                ++_currencyManager.Position;
+                ++_kaiCurrencyManager.Position;
             }
         }
 
