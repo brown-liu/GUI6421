@@ -12,7 +12,7 @@
   <xs:element name="DataSetKaioordinate" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSetKaioordinate" msprop:Generator_UserDSName="DataSetKaioordinate">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="EVENT" msprop:Generator_TableClassName="EVENTDataTable" msprop:Generator_TableVarName="tableEVENT" msprop:Generator_RowChangedName="EVENTRowChanged" msprop:Generator_TablePropName="EVENT" msprop:Generator_RowDeletingName="EVENTRowDeleting" msprop:Generator_RowChangingName="EVENTRowChanging" msprop:Generator_RowEvHandlerName="EVENTRowChangeEventHandler" msprop:Generator_RowDeletedName="EVENTRowDeleted" msprop:Generator_RowClassName="EVENTRow" msprop:Generator_UserTableName="EVENT" msprop:Generator_RowEvArgName="EVENTRowChangeEvent">
+        <xs:element name="EVENT" msprop:Generator_TableClassName="EVENTDataTable" msprop:Generator_TableVarName="tableEVENT" msprop:Generator_TablePropName="EVENT" msprop:Generator_RowDeletingName="EVENTRowDeleting" msprop:Generator_RowChangingName="EVENTRowChanging" msprop:Generator_RowEvHandlerName="EVENTRowChangeEventHandler" msprop:Generator_RowDeletedName="EVENTRowDeleted" msprop:Generator_UserTableName="EVENT" msprop:Generator_RowChangedName="EVENTRowChanged" msprop:Generator_RowEvArgName="EVENTRowChangeEvent" msprop:Generator_RowClassName="EVENTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EventID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnEventID" msprop:Generator_ColumnPropNameInRow="EventID" msprop:Generator_ColumnPropNameInTable="EventIDColumn" msprop:Generator_UserColumnName="EventID" type="xs:int" />
@@ -38,7 +38,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EVENTREGISTER" msprop:Generator_TableClassName="EVENTREGISTERDataTable" msprop:Generator_TableVarName="tableEVENTREGISTER" msprop:Generator_RowChangedName="EVENTREGISTERRowChanged" msprop:Generator_TablePropName="EVENTREGISTER" msprop:Generator_RowDeletingName="EVENTREGISTERRowDeleting" msprop:Generator_RowChangingName="EVENTREGISTERRowChanging" msprop:Generator_RowEvHandlerName="EVENTREGISTERRowChangeEventHandler" msprop:Generator_RowDeletedName="EVENTREGISTERRowDeleted" msprop:Generator_RowClassName="EVENTREGISTERRow" msprop:Generator_UserTableName="EVENTREGISTER" msprop:Generator_RowEvArgName="EVENTREGISTERRowChangeEvent">
+        <xs:element name="EVENTREGISTER" msprop:Generator_TableClassName="EVENTREGISTERDataTable" msprop:Generator_TableVarName="tableEVENTREGISTER" msprop:Generator_TablePropName="EVENTREGISTER" msprop:Generator_RowDeletingName="EVENTREGISTERRowDeleting" msprop:Generator_RowChangingName="EVENTREGISTERRowChanging" msprop:Generator_RowEvHandlerName="EVENTREGISTERRowChangeEventHandler" msprop:Generator_RowDeletedName="EVENTREGISTERRowDeleted" msprop:Generator_UserTableName="EVENTREGISTER" msprop:Generator_RowChangedName="EVENTREGISTERRowChanged" msprop:Generator_RowEvArgName="EVENTREGISTERRowChangeEvent" msprop:Generator_RowClassName="EVENTREGISTERRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RegistrationID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnRegistrationID" msprop:Generator_ColumnPropNameInRow="RegistrationID" msprop:Generator_ColumnPropNameInTable="RegistrationIDColumn" msprop:Generator_UserColumnName="RegistrationID" type="xs:int" />
@@ -48,7 +48,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="KAI" msprop:Generator_TableClassName="KAIDataTable" msprop:Generator_TableVarName="tableKAI" msprop:Generator_RowChangedName="KAIRowChanged" msprop:Generator_TablePropName="KAI" msprop:Generator_RowDeletingName="KAIRowDeleting" msprop:Generator_RowChangingName="KAIRowChanging" msprop:Generator_RowEvHandlerName="KAIRowChangeEventHandler" msprop:Generator_RowDeletedName="KAIRowDeleted" msprop:Generator_RowClassName="KAIRow" msprop:Generator_UserTableName="KAI" msprop:Generator_RowEvArgName="KAIRowChangeEvent">
+        <xs:element name="KAI" msprop:Generator_TableClassName="KAIDataTable" msprop:Generator_TableVarName="tableKAI" msprop:Generator_TablePropName="KAI" msprop:Generator_RowDeletingName="KAIRowDeleting" msprop:Generator_RowChangingName="KAIRowChanging" msprop:Generator_RowEvHandlerName="KAIRowChangeEventHandler" msprop:Generator_RowDeletedName="KAIRowDeleted" msprop:Generator_UserTableName="KAI" msprop:Generator_RowChangedName="KAIRowChanged" msprop:Generator_RowEvArgName="KAIRowChangeEvent" msprop:Generator_RowClassName="KAIRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="KaiID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnKaiID" msprop:Generator_ColumnPropNameInRow="KaiID" msprop:Generator_ColumnPropNameInTable="KaiIDColumn" msprop:Generator_UserColumnName="KaiID" type="xs:int" />
@@ -78,7 +78,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LOCATION" msprop:Generator_TableClassName="LOCATIONDataTable" msprop:Generator_TableVarName="tableLOCATION" msprop:Generator_RowChangedName="LOCATIONRowChanged" msprop:Generator_TablePropName="LOCATION" msprop:Generator_RowDeletingName="LOCATIONRowDeleting" msprop:Generator_RowChangingName="LOCATIONRowChanging" msprop:Generator_RowEvHandlerName="LOCATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="LOCATIONRowDeleted" msprop:Generator_RowClassName="LOCATIONRow" msprop:Generator_UserTableName="LOCATION" msprop:Generator_RowEvArgName="LOCATIONRowChangeEvent">
+        <xs:element name="LOCATION" msprop:Generator_TableClassName="LOCATIONDataTable" msprop:Generator_TableVarName="tableLOCATION" msprop:Generator_TablePropName="LOCATION" msprop:Generator_RowDeletingName="LOCATIONRowDeleting" msprop:Generator_RowChangingName="LOCATIONRowChanging" msprop:Generator_RowEvHandlerName="LOCATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="LOCATIONRowDeleted" msprop:Generator_UserTableName="LOCATION" msprop:Generator_RowChangedName="LOCATIONRowChanged" msprop:Generator_RowEvArgName="LOCATIONRowChangeEvent" msprop:Generator_RowClassName="LOCATIONRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LocationID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnLocationID" msprop:Generator_ColumnPropNameInRow="LocationID" msprop:Generator_ColumnPropNameInTable="LocationIDColumn" msprop:Generator_UserColumnName="LocationID" type="xs:int" />
@@ -99,7 +99,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="WHANAU" msprop:Generator_TableClassName="WHANAUDataTable" msprop:Generator_TableVarName="tableWHANAU" msprop:Generator_RowChangedName="WHANAURowChanged" msprop:Generator_TablePropName="WHANAU" msprop:Generator_RowDeletingName="WHANAURowDeleting" msprop:Generator_RowChangingName="WHANAURowChanging" msprop:Generator_RowEvHandlerName="WHANAURowChangeEventHandler" msprop:Generator_RowDeletedName="WHANAURowDeleted" msprop:Generator_RowClassName="WHANAURow" msprop:Generator_UserTableName="WHANAU" msprop:Generator_RowEvArgName="WHANAURowChangeEvent">
+        <xs:element name="WHANAU" msprop:Generator_TableClassName="WHANAUDataTable" msprop:Generator_TableVarName="tableWHANAU" msprop:Generator_TablePropName="WHANAU" msprop:Generator_RowDeletingName="WHANAURowDeleting" msprop:Generator_RowChangingName="WHANAURowChanging" msprop:Generator_RowEvHandlerName="WHANAURowChangeEventHandler" msprop:Generator_RowDeletedName="WHANAURowDeleted" msprop:Generator_UserTableName="WHANAU" msprop:Generator_RowChangedName="WHANAURowChanged" msprop:Generator_RowEvArgName="WHANAURowChangeEvent" msprop:Generator_RowClassName="WHANAURow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WhanauID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnWhanauID" msprop:Generator_ColumnPropNameInRow="WhanauID" msprop:Generator_ColumnPropNameInTable="WhanauIDColumn" msprop:Generator_UserColumnName="WhanauID" type="xs:int" />
@@ -151,13 +151,9 @@
       <xs:selector xpath=".//mstns:EVENTREGISTER" />
       <xs:field xpath="mstns:RegistrationID" />
     </xs:unique>
-    <xs:unique name="KAI_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:KAI" />
-      <xs:field xpath="mstns:KaiID" />
-    </xs:unique>
     <xs:unique name="Constraint2">
       <xs:selector xpath=".//mstns:KAI" />
-      <xs:field xpath="mstns:EventID" />
+      <xs:field xpath="mstns:KaiID" />
     </xs:unique>
     <xs:unique name="LOCATION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:LOCATION" />

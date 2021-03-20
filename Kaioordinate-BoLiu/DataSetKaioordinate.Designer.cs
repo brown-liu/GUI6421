@@ -1292,13 +1292,6 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KAIRow FindByKaiID(int KaiID) {
-                return ((KAIRow)(this.Rows.Find(new object[] {
-                            KaiID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 KAIDataTable cln = ((KAIDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1355,14 +1348,11 @@ namespace Kaioordinate_BoLiu {
                 base.Columns.Add(this.columnExpr5);
                 this.columnExpr6 = new global::System.Data.DataColumn("Expr6", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpr6);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnKaiID}, true));
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
-                                this.columnEventID}, false));
+                                this.columnKaiID}, false));
                 this.columnKaiID.AutoIncrement = true;
                 this.columnKaiID.AllowDBNull = false;
                 this.columnKaiID.Unique = true;
-                this.columnEventID.Unique = true;
                 this.columnKaiName.MaxLength = 255;
                 this.columnExpr1.AutoIncrement = true;
                 this.columnExpr3.MaxLength = 255;

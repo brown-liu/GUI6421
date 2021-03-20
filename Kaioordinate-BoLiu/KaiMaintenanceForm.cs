@@ -22,19 +22,16 @@ namespace Kaioordinate_BoLiu
             InitializeComponent();
             _dataModule = dataModule;
             _mainForm = mainForm;
-            _eventCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "Event"];
-            _kaiCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
+
             BindControls();
         }
 
 
         public void BindControls()
         {
+            //Linking textbox data
             kaiIDdislay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiId");
-
-        
             eventDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Event.EventName");
-
             preparationDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationRequired");
             preparationTimeDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationMinutes");
             kaiNameDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiName");
@@ -43,10 +40,11 @@ namespace Kaioordinate_BoLiu
 
 
             kaiMaintinanceListBox.DataSource = _dataModule.dataSetKaioordinate;
-   
             kaiMaintinanceListBox.DisplayMember = "KAI.KaiName";
-            kaiMaintinanceListBox.ValueMember = "KAI.KaiID";
+            kaiMaintinanceListBox.ValueMember = "KAI.KaiName";
 
+            _eventCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "Event"];
+            _kaiCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
 
         }
 
@@ -61,6 +59,7 @@ namespace Kaioordinate_BoLiu
             if (_kaiCurrencyManager.Position > 0)
             {
                 --_kaiCurrencyManager.Position;
+                --_eventCurrencyManager.Position;
             }
         }
 
@@ -69,11 +68,12 @@ namespace Kaioordinate_BoLiu
             if (_kaiCurrencyManager.Position < _kaiCurrencyManager.Count - 1)
             {
                 ++_kaiCurrencyManager.Position;
+                ++_eventCurrencyManager.Position;
             }
         }
 
         private void kaiAddBtn_Click(object sender, EventArgs e)
-        {
+        { //read only mode
             labelKaiId.Visible = false;
             kaiDownBtn.Enabled = false;
             kaiUpBtn.Enabled = false;
@@ -101,7 +101,7 @@ namespace Kaioordinate_BoLiu
 
         private void addKaiSaveBtn_Click(object sender, EventArgs e)
         {
-            DataRow newKaiRecord = _dataModule.Kai.NewRow();
+            DataRow newKaiRecord = _dataModule.KaiTable.NewRow();
             if (string.IsNullOrEmpty(eventDisplay.Text) || string.IsNullOrEmpty(kaiNameDisplay.Text))
             {
                 MessageBox.Show("You must enter a value for each of the text fields", "ERROR OCCURED");
@@ -113,7 +113,7 @@ namespace Kaioordinate_BoLiu
             newKaiRecord["ServeQuantity"] = Int32.Parse(serveQuantityDisplay.Text.ToString());
             newKaiRecord["PreparationMinutes"] = Int32.Parse(preparationTimeDisplay.Text.ToString());
             newKaiRecord["PreparationRequired"] = preparationDisplay.Text;
-            _dataModule.Kai.Rows.Add(newKaiRecord);
+            _dataModule.KaiTable.Rows.Add(newKaiRecord);
             _dataModule.UpdateKaiTable();
             MessageBox.Show("Kai updated successfully", "Action succeed!");
         }
