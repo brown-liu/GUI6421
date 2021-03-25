@@ -25,16 +25,6 @@
               </xs:element>
               <xs:element name="LocationID" msprop:Generator_ColumnVarNameInTable="columnLocationID" msprop:Generator_ColumnPropNameInRow="LocationID" msprop:Generator_ColumnPropNameInTable="LocationIDColumn" msprop:Generator_UserColumnName="LocationID" type="xs:int" minOccurs="0" />
               <xs:element name="EventDate" msprop:Generator_ColumnVarNameInTable="columnEventDate" msprop:Generator_ColumnPropNameInRow="EventDate" msprop:Generator_ColumnPropNameInTable="EventDateColumn" msprop:Generator_UserColumnName="EventDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Expr1" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
-              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Expr3" msprop:Generator_ColumnVarNameInTable="columnExpr3" msprop:Generator_ColumnPropNameInRow="Expr3" msprop:Generator_ColumnPropNameInTable="Expr3Column" msprop:Generator_UserColumnName="Expr3" type="xs:int" minOccurs="0" />
-              <xs:element name="Expr4" msprop:Generator_ColumnVarNameInTable="columnExpr4" msprop:Generator_ColumnPropNameInRow="Expr4" msprop:Generator_ColumnPropNameInTable="Expr4Column" msprop:Generator_UserColumnName="Expr4" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -63,18 +53,6 @@
               <xs:element name="PreparationRequired" msprop:Generator_ColumnVarNameInTable="columnPreparationRequired" msprop:Generator_ColumnPropNameInRow="PreparationRequired" msprop:Generator_ColumnPropNameInTable="PreparationRequiredColumn" msprop:Generator_UserColumnName="PreparationRequired" type="xs:boolean" minOccurs="0" />
               <xs:element name="PreparationMinutes" msprop:Generator_ColumnVarNameInTable="columnPreparationMinutes" msprop:Generator_ColumnPropNameInRow="PreparationMinutes" msprop:Generator_ColumnPropNameInTable="PreparationMinutesColumn" msprop:Generator_UserColumnName="PreparationMinutes" type="xs:int" minOccurs="0" />
               <xs:element name="ServeQuantity" msprop:Generator_ColumnVarNameInTable="columnServeQuantity" msprop:Generator_ColumnPropNameInRow="ServeQuantity" msprop:Generator_ColumnPropNameInTable="ServeQuantityColumn" msprop:Generator_UserColumnName="ServeQuantity" type="xs:int" minOccurs="0" />
-              <xs:element name="Expr1" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
-              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2" type="xs:int" minOccurs="0" />
-              <xs:element name="Expr3" msprop:Generator_ColumnVarNameInTable="columnExpr3" msprop:Generator_ColumnPropNameInRow="Expr3" msprop:Generator_ColumnPropNameInTable="Expr3Column" msprop:Generator_UserColumnName="Expr3" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Expr4" msprop:Generator_ColumnVarNameInTable="columnExpr4" msprop:Generator_ColumnPropNameInRow="Expr4" msprop:Generator_ColumnPropNameInTable="Expr4Column" msprop:Generator_UserColumnName="Expr4" type="xs:boolean" minOccurs="0" />
-              <xs:element name="Expr5" msprop:Generator_ColumnVarNameInTable="columnExpr5" msprop:Generator_ColumnPropNameInRow="Expr5" msprop:Generator_ColumnPropNameInTable="Expr5Column" msprop:Generator_UserColumnName="Expr5" type="xs:int" minOccurs="0" />
-              <xs:element name="Expr6" msprop:Generator_ColumnVarNameInTable="columnExpr6" msprop:Generator_ColumnPropNameInRow="Expr6" msprop:Generator_ColumnPropNameInTable="Expr6Column" msprop:Generator_UserColumnName="Expr6" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -163,5 +141,9 @@
       <xs:selector xpath=".//mstns:WHANAU" />
       <xs:field xpath="mstns:WhanauID" />
     </xs:unique>
+    <xs:keyref name="FK_EVENT_KAI" refer="Constraint1" msprop:rel_Generator_UserChildTable="KAI" msprop:rel_Generator_ChildPropName="GetKAIRows" msprop:rel_Generator_UserRelationName="FK_EVENT_KAI" msprop:rel_Generator_ParentPropName="EVENTRow" msprop:rel_Generator_RelationVarName="relationFK_EVENT_KAI" msprop:rel_Generator_UserParentTable="EVENT" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:KAI" />
+      <xs:field xpath="mstns:EventID" />
+    </xs:keyref>
   </xs:element>
 </xs:schema>

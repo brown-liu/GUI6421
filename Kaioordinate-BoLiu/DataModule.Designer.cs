@@ -31,11 +31,11 @@ namespace Kaioordinate_BoLiu
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataModule));
             this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.oleDbInsertCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbUpdateCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
-            this.EventTableAdaptor = new System.Data.OleDb.OleDbDataAdapter();
-            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
+            this.EventAdaptor = new System.Data.OleDb.OleDbDataAdapter();
             this.oleDbSelectCommand2 = new System.Data.OleDb.OleDbCommand();
             this.oleDbInsertCommand2 = new System.Data.OleDb.OleDbCommand();
             this.oleDbUpdateCommand2 = new System.Data.OleDb.OleDbCommand();
@@ -62,23 +62,22 @@ namespace Kaioordinate_BoLiu
             // 
             // oleDbSelectCommand1
             // 
-            this.oleDbSelectCommand1.CommandText = "SELECT        EventID, EventName, LocationID, EventDate, EventID AS Expr1, EventN" +
-    "ame AS Expr2, LocationID AS Expr3, EventDate AS Expr4\r\nFROM            EVENT\r\nOR" +
-    "DER BY EventID";
+            this.oleDbSelectCommand1.CommandText = "SELECT        EventID, EventName, LocationID, EventDate\r\nFROM            EVENT\r\nO" +
+    "RDER BY EventID";
             this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
+            // 
+            // oleDbConnection1
+            // 
+            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Temp\\kai-oordinate.mdb";
             // 
             // oleDbInsertCommand1
             // 
-            this.oleDbInsertCommand1.CommandText = "INSERT INTO `EVENT` (`EventName`, `LocationID`, `EventDate`, `EventName`, `Locati" +
-    "onID`, `EventDate`) VALUES (?, ?, ?, ?, ?, ?)";
+            this.oleDbInsertCommand1.CommandText = "INSERT INTO `EVENT` (`EventName`, `LocationID`, `EventDate`) VALUES (?, ?, ?)";
             this.oleDbInsertCommand1.Connection = this.oleDbConnection1;
             this.oleDbInsertCommand1.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
             new System.Data.OleDb.OleDbParameter("EventName", System.Data.OleDb.OleDbType.VarWChar, 0, "EventName"),
             new System.Data.OleDb.OleDbParameter("LocationID", System.Data.OleDb.OleDbType.Integer, 0, "LocationID"),
-            new System.Data.OleDb.OleDbParameter("EventDate", System.Data.OleDb.OleDbType.Date, 0, "EventDate"),
-            new System.Data.OleDb.OleDbParameter("Expr2", System.Data.OleDb.OleDbType.VarWChar, 0, "Expr2"),
-            new System.Data.OleDb.OleDbParameter("Expr3", System.Data.OleDb.OleDbType.Integer, 0, "Expr3"),
-            new System.Data.OleDb.OleDbParameter("Expr4", System.Data.OleDb.OleDbType.Date, 0, "Expr4")});
+            new System.Data.OleDb.OleDbParameter("EventDate", System.Data.OleDb.OleDbType.Date, 0, "EventDate")});
             // 
             // oleDbUpdateCommand1
             // 
@@ -88,24 +87,13 @@ namespace Kaioordinate_BoLiu
             new System.Data.OleDb.OleDbParameter("EventName", System.Data.OleDb.OleDbType.VarWChar, 0, "EventName"),
             new System.Data.OleDb.OleDbParameter("LocationID", System.Data.OleDb.OleDbType.Integer, 0, "LocationID"),
             new System.Data.OleDb.OleDbParameter("EventDate", System.Data.OleDb.OleDbType.Date, 0, "EventDate"),
-            new System.Data.OleDb.OleDbParameter("Expr2", System.Data.OleDb.OleDbType.VarWChar, 0, "Expr2"),
-            new System.Data.OleDb.OleDbParameter("Expr3", System.Data.OleDb.OleDbType.Integer, 0, "Expr3"),
-            new System.Data.OleDb.OleDbParameter("Expr4", System.Data.OleDb.OleDbType.Date, 0, "Expr4"),
             new System.Data.OleDb.OleDbParameter("Original_EventID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventID", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_EventName", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EventName", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_EventName", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventName", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_LocationID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LocationID", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_LocationID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "LocationID", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_EventDate", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EventDate", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_EventDate", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventDate", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr2", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr2", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr3", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr3", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr4", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr4", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, null)});
+            new System.Data.OleDb.OleDbParameter("Original_EventDate", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventDate", System.Data.DataRowVersion.Original, null)});
             // 
             // oleDbDeleteCommand1
             // 
@@ -118,57 +106,38 @@ namespace Kaioordinate_BoLiu
             new System.Data.OleDb.OleDbParameter("IsNull_LocationID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LocationID", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_LocationID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "LocationID", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_EventDate", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EventDate", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_EventDate", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventDate", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr2", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr2", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr3", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr3", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr4", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr4", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, null)});
+            new System.Data.OleDb.OleDbParameter("Original_EventDate", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventDate", System.Data.DataRowVersion.Original, null)});
             // 
-            // EventTableAdaptor
+            // EventAdaptor
             // 
-            this.EventTableAdaptor.DeleteCommand = this.oleDbDeleteCommand1;
-            this.EventTableAdaptor.InsertCommand = this.oleDbInsertCommand1;
-            this.EventTableAdaptor.SelectCommand = this.oleDbSelectCommand1;
-            this.EventTableAdaptor.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            this.EventAdaptor.DeleteCommand = this.oleDbDeleteCommand1;
+            this.EventAdaptor.InsertCommand = this.oleDbInsertCommand1;
+            this.EventAdaptor.SelectCommand = this.oleDbSelectCommand1;
+            this.EventAdaptor.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
             new System.Data.Common.DataTableMapping("Table", "EVENT", new System.Data.Common.DataColumnMapping[] {
                         new System.Data.Common.DataColumnMapping("EventID", "EventID"),
                         new System.Data.Common.DataColumnMapping("EventName", "EventName"),
                         new System.Data.Common.DataColumnMapping("LocationID", "LocationID"),
-                        new System.Data.Common.DataColumnMapping("EventDate", "EventDate"),
-                        new System.Data.Common.DataColumnMapping("Expr1", "Expr1"),
-                        new System.Data.Common.DataColumnMapping("Expr2", "Expr2"),
-                        new System.Data.Common.DataColumnMapping("Expr3", "Expr3"),
-                        new System.Data.Common.DataColumnMapping("Expr4", "Expr4")})});
-            this.EventTableAdaptor.UpdateCommand = this.oleDbUpdateCommand1;
-            // 
-            // oleDbConnection1
-            // 
-            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Temp\\kai-oordinate.mdb";
+                        new System.Data.Common.DataColumnMapping("EventDate", "EventDate")})});
+            this.EventAdaptor.UpdateCommand = this.oleDbUpdateCommand1;
             // 
             // oleDbSelectCommand2
             // 
-            this.oleDbSelectCommand2.CommandText = resources.GetString("oleDbSelectCommand2.CommandText");
+            this.oleDbSelectCommand2.CommandText = "SELECT        KaiID, EventID, KaiName, PreparationRequired, PreparationMinutes, S" +
+    "erveQuantity\r\nFROM            KAI\r\nORDER BY KaiID";
             this.oleDbSelectCommand2.Connection = this.oleDbConnection1;
             // 
             // oleDbInsertCommand2
             // 
-            this.oleDbInsertCommand2.CommandText = resources.GetString("oleDbInsertCommand2.CommandText");
+            this.oleDbInsertCommand2.CommandText = "INSERT INTO `KAI` (`EventID`, `KaiName`, `PreparationRequired`, `PreparationMinut" +
+    "es`, `ServeQuantity`) VALUES (?, ?, ?, ?, ?)";
             this.oleDbInsertCommand2.Connection = this.oleDbConnection1;
             this.oleDbInsertCommand2.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
             new System.Data.OleDb.OleDbParameter("EventID", System.Data.OleDb.OleDbType.Integer, 0, "EventID"),
             new System.Data.OleDb.OleDbParameter("KaiName", System.Data.OleDb.OleDbType.VarWChar, 0, "KaiName"),
             new System.Data.OleDb.OleDbParameter("PreparationRequired", System.Data.OleDb.OleDbType.Boolean, 0, "PreparationRequired"),
             new System.Data.OleDb.OleDbParameter("PreparationMinutes", System.Data.OleDb.OleDbType.Integer, 0, "PreparationMinutes"),
-            new System.Data.OleDb.OleDbParameter("ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, "ServeQuantity"),
-            new System.Data.OleDb.OleDbParameter("Expr2", System.Data.OleDb.OleDbType.Integer, 0, "Expr2"),
-            new System.Data.OleDb.OleDbParameter("Expr3", System.Data.OleDb.OleDbType.VarWChar, 0, "Expr3"),
-            new System.Data.OleDb.OleDbParameter("Expr4", System.Data.OleDb.OleDbType.Boolean, 0, "Expr4"),
-            new System.Data.OleDb.OleDbParameter("Expr5", System.Data.OleDb.OleDbType.Integer, 0, "Expr5"),
-            new System.Data.OleDb.OleDbParameter("Expr6", System.Data.OleDb.OleDbType.Integer, 0, "Expr6")});
+            new System.Data.OleDb.OleDbParameter("ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, "ServeQuantity")});
             // 
             // oleDbUpdateCommand2
             // 
@@ -180,11 +149,6 @@ namespace Kaioordinate_BoLiu
             new System.Data.OleDb.OleDbParameter("PreparationRequired", System.Data.OleDb.OleDbType.Boolean, 0, "PreparationRequired"),
             new System.Data.OleDb.OleDbParameter("PreparationMinutes", System.Data.OleDb.OleDbType.Integer, 0, "PreparationMinutes"),
             new System.Data.OleDb.OleDbParameter("ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, "ServeQuantity"),
-            new System.Data.OleDb.OleDbParameter("Expr2", System.Data.OleDb.OleDbType.Integer, 0, "Expr2"),
-            new System.Data.OleDb.OleDbParameter("Expr3", System.Data.OleDb.OleDbType.VarWChar, 0, "Expr3"),
-            new System.Data.OleDb.OleDbParameter("Expr4", System.Data.OleDb.OleDbType.Boolean, 0, "Expr4"),
-            new System.Data.OleDb.OleDbParameter("Expr5", System.Data.OleDb.OleDbType.Integer, 0, "Expr5"),
-            new System.Data.OleDb.OleDbParameter("Expr6", System.Data.OleDb.OleDbType.Integer, 0, "Expr6"),
             new System.Data.OleDb.OleDbParameter("Original_KaiID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "KaiID", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_EventID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EventID", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_EventID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventID", System.Data.DataRowVersion.Original, null),
@@ -195,19 +159,7 @@ namespace Kaioordinate_BoLiu
             new System.Data.OleDb.OleDbParameter("IsNull_PreparationMinutes", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PreparationMinutes", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_PreparationMinutes", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "PreparationMinutes", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ServeQuantity", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ServeQuantity", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr2", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr2", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr3", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr3", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr4", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr4", System.Data.OleDb.OleDbType.Boolean, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr5", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr5", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr5", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr5", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr6", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr6", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr6", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr6", System.Data.DataRowVersion.Original, null)});
+            new System.Data.OleDb.OleDbParameter("Original_ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ServeQuantity", System.Data.DataRowVersion.Original, null)});
             // 
             // oleDbDeleteCommand2
             // 
@@ -224,19 +176,7 @@ namespace Kaioordinate_BoLiu
             new System.Data.OleDb.OleDbParameter("IsNull_PreparationMinutes", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PreparationMinutes", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_PreparationMinutes", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "PreparationMinutes", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ServeQuantity", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ServeQuantity", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr1", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr1", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr2", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr2", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr2", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr3", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr3", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr3", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr4", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr4", System.Data.OleDb.OleDbType.Boolean, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr4", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr5", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr5", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr5", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr5", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Expr6", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Expr6", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Expr6", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Expr6", System.Data.DataRowVersion.Original, null)});
+            new System.Data.OleDb.OleDbParameter("Original_ServeQuantity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ServeQuantity", System.Data.DataRowVersion.Original, null)});
             // 
             // KaiTableAdaptor
             // 
@@ -250,13 +190,7 @@ namespace Kaioordinate_BoLiu
                         new System.Data.Common.DataColumnMapping("KaiName", "KaiName"),
                         new System.Data.Common.DataColumnMapping("PreparationRequired", "PreparationRequired"),
                         new System.Data.Common.DataColumnMapping("PreparationMinutes", "PreparationMinutes"),
-                        new System.Data.Common.DataColumnMapping("ServeQuantity", "ServeQuantity"),
-                        new System.Data.Common.DataColumnMapping("Expr1", "Expr1"),
-                        new System.Data.Common.DataColumnMapping("Expr2", "Expr2"),
-                        new System.Data.Common.DataColumnMapping("Expr3", "Expr3"),
-                        new System.Data.Common.DataColumnMapping("Expr4", "Expr4"),
-                        new System.Data.Common.DataColumnMapping("Expr5", "Expr5"),
-                        new System.Data.Common.DataColumnMapping("Expr6", "Expr6")})});
+                        new System.Data.Common.DataColumnMapping("ServeQuantity", "ServeQuantity")})});
             this.KaiTableAdaptor.UpdateCommand = this.oleDbUpdateCommand2;
             // 
             // oleDbSelectCommand3
@@ -448,9 +382,10 @@ namespace Kaioordinate_BoLiu
             // 
             // DataModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dataSetKaioordinate)).EndInit();
@@ -461,11 +396,10 @@ namespace Kaioordinate_BoLiu
         #endregion
 
         private System.Data.OleDb.OleDbCommand oleDbSelectCommand1;
-        private System.Data.OleDb.OleDbConnection oleDbConnection1;
         private System.Data.OleDb.OleDbCommand oleDbInsertCommand1;
         private System.Data.OleDb.OleDbCommand oleDbUpdateCommand1;
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand1;
-        private System.Data.OleDb.OleDbDataAdapter EventTableAdaptor;
+        private System.Data.OleDb.OleDbDataAdapter EventAdaptor;
         private System.Data.OleDb.OleDbCommand oleDbSelectCommand2;
         private System.Data.OleDb.OleDbCommand oleDbInsertCommand2;
         private System.Data.OleDb.OleDbCommand oleDbUpdateCommand2;
@@ -487,5 +421,6 @@ namespace Kaioordinate_BoLiu
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand5;
         private System.Data.OleDb.OleDbDataAdapter WhanauAdapter;
         public DataSetKaioordinate dataSetKaioordinate;
+        public System.Data.OleDb.OleDbConnection oleDbConnection1;
     }
 }

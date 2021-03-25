@@ -29,31 +29,41 @@ namespace Kaioordinate_BoLiu
         {
             InitializeComponent();
             dataSetKaioordinate.EnforceConstraints = false;
+            KaiTableAdaptor.Fill(dataSetKaioordinate);
+            EventRegistorAdaptor.Fill(dataSetKaioordinate);
+            EventAdaptor.Fill(dataSetKaioordinate);
+            LocationAdaptor.Fill(dataSetKaioordinate);
+            WhanauAdapter.Fill(dataSetKaioordinate);
+
 
             KaiTable = dataSetKaioordinate.Tables["KAI"];
-            KaiTableAdaptor.Fill(dataSetKaioordinate);
+            EventTable = dataSetKaioordinate.Tables["EVENT"];
+            EventRegisterTable = dataSetKaioordinate.Tables["EVENTREGISTER"];
+            LocationTable = dataSetKaioordinate.Tables["Location"];
+            WhanauTable = dataSetKaioordinate.Tables["Whanau"];
+
             KaiView = new DataView(KaiTable);
             KaiView.Sort = "KaiID";
 
-            EventTable = dataSetKaioordinate.Tables["Event"];
-            EventRegistorAdaptor.Fill(dataSetKaioordinate);
+
+
             EventView = new DataView(EventTable);
-            EventView.Sort = "EventId";
+            EventView.Sort = "EventID";
 
-            EventRegisterTable = dataSetKaioordinate.Tables["EventRegister"];
-            EventRegistorAdaptor.Fill(dataSetKaioordinate);
+
+
             EventRegisterView = new DataView(EventRegisterTable);
-            EventRegisterView.Sort = "RegistrationId";
+            EventRegisterView.Sort = "RegistrationID";
 
-            LocationTable = dataSetKaioordinate.Tables["Location"];
-            LocationAdaptor.Fill(dataSetKaioordinate);
+
+
             LocationView = new DataView(LocationTable);
-            LocationView.Sort = "locationId";
+            LocationView.Sort = "LocationID";
 
-            WhanauTable = dataSetKaioordinate.Tables["Whanau"];
-            WhanauAdapter.Fill(dataSetKaioordinate);
+
+
             WhanauView = new DataView(WhanauTable);
-            WhanauView.Sort = "WhanauId";
+            WhanauView.Sort = "WhanauID";
 
 
 

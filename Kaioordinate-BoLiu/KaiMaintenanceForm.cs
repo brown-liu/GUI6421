@@ -13,15 +13,17 @@ namespace Kaioordinate_BoLiu
     public partial class KaiMaintenanceForm : Form
     {
         private DataModule _dataModule;
-        private readonly MainForm _mainForm;
+        private MainForm _mainForm;
         private CurrencyManager _kaiCurrencyManager;
         private CurrencyManager _eventCurrencyManager;
 
         public KaiMaintenanceForm(DataModule dataModule, MainForm mainForm)
-        {
-            InitializeComponent();
+        { 
             _dataModule = dataModule;
             _mainForm = mainForm;
+
+            InitializeComponent();
+           
 
             BindControls();
         }
@@ -29,9 +31,15 @@ namespace Kaioordinate_BoLiu
 
         public void BindControls()
         {
+            _kaiCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
+            _eventCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "EVENT"];
+            
+
             //Linking textbox data
             kaiIDdislay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiId");
+
             eventDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Event.EventName");
+
             preparationDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationRequired");
             preparationTimeDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationMinutes");
             kaiNameDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiName");
@@ -43,8 +51,7 @@ namespace Kaioordinate_BoLiu
             kaiMaintinanceListBox.DisplayMember = "KAI.KaiName";
             kaiMaintinanceListBox.ValueMember = "KAI.KaiName";
 
-            _eventCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "Event"];
-            _kaiCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
+
 
         }
 
@@ -59,7 +66,6 @@ namespace Kaioordinate_BoLiu
             if (_kaiCurrencyManager.Position > 0)
             {
                 --_kaiCurrencyManager.Position;
-                --_eventCurrencyManager.Position;
             }
         }
 
@@ -68,7 +74,7 @@ namespace Kaioordinate_BoLiu
             if (_kaiCurrencyManager.Position < _kaiCurrencyManager.Count - 1)
             {
                 ++_kaiCurrencyManager.Position;
-                ++_eventCurrencyManager.Position;
+               
             }
         }
 
@@ -142,6 +148,12 @@ namespace Kaioordinate_BoLiu
 
 
 
+        }
+
+        private void kaiMaintinanceListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var eventID = _dataModule.KaiTable.Rows[_kaiCurrencyManager.Position]["EventID"];
+            _eventCurrencyManager.Position = _dataModule.EventView.Find(eventID);
         }
     }
 }
