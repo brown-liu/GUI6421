@@ -6,3 +6,14 @@
 3. In A1 Task2, para 4 and the list 'The Up, Down, Return, Update and Delete buttons are disabled, and the list should
 disappear ' list disapear or whole box disappear
 
+----------------------
+
+4. when updating kai, if event name changes, does it required to create a new event or change previous event name?
+
+5. all new Kai entry are required to have event name but 
+6. If the user clicks on the Delete button and the selected record has no event, then the user is asked to 
+confirm the deletion – if the user confirms the deletion then the kai is deleted from the database and 
+the message “Kai deleted successfully” is displayed.
+7. If the user clicks on the Delete button and the selected kai has an event, then the error message “You 
+may only delete kai that have no event relation” is displayed.
+??????????????

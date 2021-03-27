@@ -12,7 +12,12 @@ namespace Kaioordinate_BoLiu
 {
     public partial class WhanauManagementForm : Form
     {
-        public WhanauManagementForm()
+        private DataModule _dataModule;
+        private MainForm _mainForm;
+        private CurrencyManager _locationCurrencyManager;
+        private CurrencyManager _eventCurrencyManager;
+
+        public WhanauManagementForm(DataModule dataModule, MainForm mainForm)
         {
             InitializeComponent();
         }

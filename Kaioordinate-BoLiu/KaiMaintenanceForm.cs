@@ -18,12 +18,12 @@ namespace Kaioordinate_BoLiu
         private CurrencyManager _eventCurrencyManager;
 
         public KaiMaintenanceForm(DataModule dataModule, MainForm mainForm)
-        { 
+        {
             _dataModule = dataModule;
             _mainForm = mainForm;
 
             InitializeComponent();
-           
+
 
             BindControls();
         }
@@ -33,7 +33,7 @@ namespace Kaioordinate_BoLiu
         {
             _kaiCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
             _eventCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "EVENT"];
-            
+
 
             //Linking textbox data
             kaiIDdislay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiId");
@@ -74,79 +74,74 @@ namespace Kaioordinate_BoLiu
             if (_kaiCurrencyManager.Position < _kaiCurrencyManager.Count - 1)
             {
                 ++_kaiCurrencyManager.Position;
-               
+
             }
         }
 
+        private void EnableSubMenuBtns(bool ifEnable)
+        {
+            kaiDownBtn.Enabled = ifEnable;
+            kaiUpBtn.Enabled = ifEnable;
+            kaiAddBtn.Enabled = ifEnable;
+            kaiReturnBtn.Enabled = ifEnable;
+            kaiUpdateBtn.Enabled = ifEnable;
+            kaiDeleteBtn.Enabled = ifEnable;
+        }
+
+
         private void kaiAddBtn_Click(object sender, EventArgs e)
-        { //read only mode
-            labelKaiId.Visible = false;
-            kaiDownBtn.Enabled = false;
-            kaiUpBtn.Enabled = false;
-            kaiAddBtn.Enabled = false;
-            kaiReturnBtn.Enabled = false;
-            kaiUpdateBtn.Enabled = false;
-            kaiDeleteBtn.Enabled = false;
+        {
+            EnableSubMenuBtns(false);
+
+            addKaiPanel.Visible = true;
             kaiMaintinanceListBox.Visible = false;
             addKaiSaveBtn.Visible = true;
             addKaiCancelBtn.Visible = true;
-            kaiIDdislay.Visible = false;
-            preparationDisplay.Visible = false;
-
-            eventDisplay.ReadOnly = false;
-            eventDisplay.Text = "";
-            kaiNameDisplay.ReadOnly = false;
-            kaiNameDisplay.Text = "";
-
-            kaiAddCheckBox.Visible = true;
-            preparationTimeDisplay.ReadOnly = false;
-            serveQuantityDisplay.ReadOnly = false;
-
 
         }
 
         private void addKaiSaveBtn_Click(object sender, EventArgs e)
         {
             DataRow newKaiRecord = _dataModule.KaiTable.NewRow();
+            DataRow newEventRecord = _dataModule.EventTable.NewRow();
+
             if (string.IsNullOrEmpty(eventDisplay.Text) || string.IsNullOrEmpty(kaiNameDisplay.Text))
             {
                 MessageBox.Show("You must enter a value for each of the text fields", "ERROR OCCURED");
                 return;
             }
 
+            newEventRecord["EventName"] = addPanelEventName.Text;
+            _dataModule.EventTable.Rows.Add(newEventRecord);
+            _dataModule.UpdateEventTable();
 
-            newKaiRecord["KaiName"] = eventDisplay.Text;
-            newKaiRecord["ServeQuantity"] = Int32.Parse(serveQuantityDisplay.Text.ToString());
-            newKaiRecord["PreparationMinutes"] = Int32.Parse(preparationTimeDisplay.Text.ToString());
-            newKaiRecord["PreparationRequired"] = preparationDisplay.Text;
+            newKaiRecord["EventId"] = newEventRecord["EventId"];
+            newKaiRecord["KaiName"] = addFormKaiName.Text;
+            newKaiRecord["ServeQuantity"] = Int32.Parse(addPanelServingQuantity.Text.ToString());
+            newKaiRecord["PreparationMinutes"] = Int32.Parse(addPanelPreparationTime.Text.ToString());
+            newKaiRecord["PreparationRequired"] = kaiAddCheckBox.Checked;
+
+
+
             _dataModule.KaiTable.Rows.Add(newKaiRecord);
             _dataModule.UpdateKaiTable();
+
+
+
             MessageBox.Show("Kai updated successfully", "Action succeed!");
+            addKaiCancelBtn_Click(sender, e);
+
         }
 
         private void addKaiCancelBtn_Click(object sender, EventArgs e)
         {
-
-            labelKaiId.Visible = true;
-            kaiDownBtn.Enabled = true;
-            kaiUpBtn.Enabled = true;
-            kaiAddBtn.Enabled = true;
-            kaiReturnBtn.Enabled = true;
-            kaiUpdateBtn.Enabled = true;
-            kaiDeleteBtn.Enabled = true;
+            addKaiPanel.Visible = false;
             kaiMaintinanceListBox.Visible = true;
             addKaiSaveBtn.Visible = false;
             addKaiCancelBtn.Visible = false;
-            kaiIDdislay.Visible = true;
-            preparationDisplay.Visible = true;
+            updateKaiBtn.Visible = false;
 
-            eventDisplay.ReadOnly = true;
-            kaiNameDisplay.ReadOnly = true;
-            kaiAddCheckBox.Visible = false;
-            preparationTimeDisplay.ReadOnly = true;
-            serveQuantityDisplay.ReadOnly = true;
-
-
+            EnableSubMenuBtns(true);
 
         }
 
@@ -154,6 +149,71 @@ namespace Kaioordinate_BoLiu
         {
             var eventID = _dataModule.KaiTable.Rows[_kaiCurrencyManager.Position]["EventID"];
             _eventCurrencyManager.Position = _dataModule.EventView.Find(eventID);
+        }
+
+        private void kaiDeleteBtn_Click(object sender, EventArgs e)
+        {
+            DataRow deleteKaiRow = _dataModule.KaiTable.Rows[_kaiCurrencyManager.Position];
+
+            if (MessageBox.Show("Are you sure you want to delete this record?", "Warning",
+            MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                deleteKaiRow.Delete();
+                _dataModule.UpdateKaiTable();
+            }
+        }
+
+        private void kaiUpdateBtn_Click(object sender, EventArgs e)
+        {
+
+
+            EnableSubMenuBtns(false);
+            addKaiPanel.Visible = true;
+            kaiMaintinanceListBox.Visible = false;
+            updateKaiBtn.Visible = true;
+            addKaiCancelBtn.Visible = true;
+
+            var currentKaiRow = _dataModule.KaiTable.Rows[_kaiCurrencyManager.Position];
+            var currentEventRow = _dataModule.EventTable.Rows[_eventCurrencyManager.Position];
+
+            addPanelEventName.Text = currentEventRow["EventName"].ToString();
+            addFormKaiName.Text = currentKaiRow["KaiName"].ToString();
+            kaiAddCheckBox.Checked = (bool)currentKaiRow["PreparationRequired"];
+            addPanelPreparationTime.Text = currentKaiRow["PreparationMinutes"].ToString();
+            addPanelServingQuantity.Text = currentKaiRow["ServeQuantity"].ToString();
+
+        }
+
+        private void updateKaiBtn_Click(object sender, EventArgs e)
+        {
+            var currentKaiRow = _dataModule.KaiTable.Rows[_kaiCurrencyManager.Position];
+            var currentEventRow = _dataModule.EventTable.Rows[_eventCurrencyManager.Position];
+
+            if (addPanelEventName.Text == "" || addFormKaiName.Text == "" || addPanelServingQuantity.Text == "" || addPanelPreparationTime.Text == "")
+            {
+
+                MessageBox.Show("You must enter a value for each of the text fields", "ERROR OCCURED");
+                return;
+
+            }
+
+
+            currentEventRow["EventName"] = addPanelEventName.Text;
+            _eventCurrencyManager.EndCurrentEdit();
+            _dataModule.UpdateEventTable();
+
+
+            currentKaiRow["EventId"] = currentEventRow["EventId"];
+            currentKaiRow["KaiName"] = addFormKaiName.Text;
+            currentKaiRow["ServeQuantity"] = Int32.Parse(addPanelServingQuantity.Text.ToString());
+            currentKaiRow["PreparationMinutes"] = Int32.Parse(addPanelPreparationTime.Text.ToString());
+            currentKaiRow["PreparationRequired"] = kaiAddCheckBox.Checked;
+
+            _kaiCurrencyManager.EndCurrentEdit();
+            _dataModule.UpdateKaiTable();
+
+            MessageBox.Show("Kai updated successfully", "Action succeed!");
+            addKaiCancelBtn_Click(sender, e);
         }
     }
 }

@@ -86,5 +86,24 @@ namespace Kaioordinate_BoLiu
             KaiTableAdaptor.Update(KaiTable);
         }
 
+        public void UpdateEventTable()
+        {
+            EventAdaptor.Update(EventTable);
+        }
+
+        public void UpdateEventRegisterTable()
+        {
+            EventRegistorAdaptor.Update(EventRegisterTable);
+        }
+
+        public void UpdateLocationTable()
+        {
+            LocationAdaptor.Update(LocationTable);
+        }
+
+        public void UpdateWhanauTable()
+        {
+            WhanauAdapter.Update(WhanauTable);
+        }
     }
 }

@@ -12,7 +12,13 @@ namespace Kaioordinate_BoLiu
 {
     public partial class LocationManagementForm : Form
     {
-        public LocationManagementForm()
+        private DataModule _dataModule;
+        private MainForm _mainForm;
+        private CurrencyManager _locationCurrencyManager;
+        private CurrencyManager _eventCurrencyManager;
+
+    
+        public LocationManagementForm(DataModule dataModule, MainForm mainForm)
         {
             InitializeComponent();
         }

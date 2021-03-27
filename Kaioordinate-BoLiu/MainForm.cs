@@ -39,7 +39,7 @@ namespace Kaioordinate_BoLiu
 
         private void whanauBtn_Click(object sender, EventArgs e)
         {
-            whanauManagementForm = new WhanauManagementForm();
+            whanauManagementForm = new WhanauManagementForm(_dataModule, this);
             whanauManagementForm.ShowDialog();
 
         }
@@ -54,27 +54,30 @@ namespace Kaioordinate_BoLiu
             kaiMaintenanceForm.ShowDialog();
         }
 
-        private void eventBtn_Click(object sender, EventArgs e)
-        {
-            eventManagementForm = new EventManagementForm();
-            eventManagementForm.ShowDialog();
-        }
+ 
 
         private void locationBtn_Click(object sender, EventArgs e)
         {
-            locationManagement = new LocationManagementForm();
+            locationManagement = new LocationManagementForm(_dataModule, this);
             locationManagement.ShowDialog();
         }
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-            registrationManagementForm = new RegistrationManagementForm();
+            registrationManagementForm = new RegistrationManagementForm(_dataModule, this);
             registrationManagementForm.ShowDialog();
         }
 
         private void homeExistBtn_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void eventBtn_Click(object sender, EventArgs e)
+        {  
+            eventManagementForm = new EventManagementForm(_dataModule, this);
+        eventManagementForm.ShowDialog();
+
         }
     }
 }
