@@ -176,7 +176,7 @@ namespace Kaioordinate_BoLiu
 
             if (anyKaiRow.Length != 0)
             {
-                MessageBox.Show("You may only delete an event that has no kai", "Warning");
+                MessageBox.Show("You may only delete an location that has no events", "Warning");
                 return;
             }
 

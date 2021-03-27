@@ -29,6 +29,7 @@ namespace Kaioordinate_BoLiu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WhanauManagementForm));
             this.whanauReturnBtn = new FontAwesome.Sharp.IconButton();
             this.whanauDeleteBtn = new FontAwesome.Sharp.IconButton();
             this.whanauUpdateBtn = new FontAwesome.Sharp.IconButton();
@@ -49,6 +50,7 @@ namespace Kaioordinate_BoLiu
             this.label1 = new System.Windows.Forms.Label();
             this.displayPhone = new System.Windows.Forms.TextBox();
             this.panelAddWhannau = new System.Windows.Forms.Panel();
+            this.panelUpdateWhanauBtn = new FontAwesome.Sharp.IconButton();
             this.panelCancel = new FontAwesome.Sharp.IconButton();
             this.panelAddWhanauBtn = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,7 +63,6 @@ namespace Kaioordinate_BoLiu
             this.panelAddLastName = new System.Windows.Forms.TextBox();
             this.panelAddFirstName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panelUpdateWhanauBtn = new FontAwesome.Sharp.IconButton();
             this.panelAddWhannau.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -294,6 +295,23 @@ namespace Kaioordinate_BoLiu
             this.panelAddWhannau.TabIndex = 69;
             this.panelAddWhannau.Visible = false;
             // 
+            // panelUpdateWhanauBtn
+            // 
+            this.panelUpdateWhanauBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.panelUpdateWhanauBtn.IconColor = System.Drawing.Color.Black;
+            this.panelUpdateWhanauBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.panelUpdateWhanauBtn.IconSize = 25;
+            this.panelUpdateWhanauBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panelUpdateWhanauBtn.Location = new System.Drawing.Point(81, 279);
+            this.panelUpdateWhanauBtn.Name = "panelUpdateWhanauBtn";
+            this.panelUpdateWhanauBtn.Size = new System.Drawing.Size(92, 35);
+            this.panelUpdateWhanauBtn.TabIndex = 80;
+            this.panelUpdateWhanauBtn.TabStop = false;
+            this.panelUpdateWhanauBtn.Text = "Update";
+            this.panelUpdateWhanauBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.panelUpdateWhanauBtn.UseVisualStyleBackColor = true;
+            this.panelUpdateWhanauBtn.Click += new System.EventHandler(this.panelUpdateWhanauBtn_Click);
+            // 
             // panelCancel
             // 
             this.panelCancel.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -417,23 +435,6 @@ namespace Kaioordinate_BoLiu
             this.label6.TabIndex = 68;
             this.label6.Text = "First Name";
             // 
-            // panelUpdateWhanauBtn
-            // 
-            this.panelUpdateWhanauBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.panelUpdateWhanauBtn.IconColor = System.Drawing.Color.Black;
-            this.panelUpdateWhanauBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.panelUpdateWhanauBtn.IconSize = 25;
-            this.panelUpdateWhanauBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.panelUpdateWhanauBtn.Location = new System.Drawing.Point(81, 279);
-            this.panelUpdateWhanauBtn.Name = "panelUpdateWhanauBtn";
-            this.panelUpdateWhanauBtn.Size = new System.Drawing.Size(92, 35);
-            this.panelUpdateWhanauBtn.TabIndex = 80;
-            this.panelUpdateWhanauBtn.TabStop = false;
-            this.panelUpdateWhanauBtn.Text = "Update";
-            this.panelUpdateWhanauBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.panelUpdateWhanauBtn.UseVisualStyleBackColor = true;
-            this.panelUpdateWhanauBtn.Click += new System.EventHandler(this.panelUpdateWhanauBtn_Click);
-            // 
             // WhanauManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +461,7 @@ namespace Kaioordinate_BoLiu
             this.Controls.Add(this.displayFirstName);
             this.Controls.Add(this.labelFName);
             this.Controls.Add(this.labelWID);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WhanauManagementForm";
             this.Text = "Whanau Management Form";
             this.panelAddWhannau.ResumeLayout(false);

@@ -29,6 +29,7 @@ namespace Kaioordinate_BoLiu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventManagementForm));
             this.addEventCancelBtn = new FontAwesome.Sharp.IconButton();
             this.panelAddEventSaveBtn = new FontAwesome.Sharp.IconButton();
             this.eventReturnBtn = new FontAwesome.Sharp.IconButton();
@@ -368,6 +369,7 @@ namespace Kaioordinate_BoLiu
             this.Controls.Add(this.labelEventName);
             this.Controls.Add(this.labelEventID);
             this.Controls.Add(this.eventListBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EventManagementForm";
             this.Text = "Event Management Form";
             this.panelAddEvent.ResumeLayout(false);

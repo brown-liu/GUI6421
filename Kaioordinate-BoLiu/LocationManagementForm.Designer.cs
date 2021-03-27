@@ -29,6 +29,7 @@ namespace Kaioordinate_BoLiu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocationManagementForm));
             this.locationReturnBtn = new FontAwesome.Sharp.IconButton();
             this.locationDeleteBtn = new FontAwesome.Sharp.IconButton();
             this.locationUpdateBtn = new FontAwesome.Sharp.IconButton();
@@ -43,13 +44,13 @@ namespace Kaioordinate_BoLiu
             this.labelFName = new System.Windows.Forms.Label();
             this.labelWID = new System.Windows.Forms.Label();
             this.panelAddLocation = new System.Windows.Forms.Panel();
+            this.updateLocationBtn = new FontAwesome.Sharp.IconButton();
+            this.panelSaveLocationBtn = new FontAwesome.Sharp.IconButton();
+            this.addLocationCancelBtn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.addPanelAddress = new System.Windows.Forms.TextBox();
             this.addPanelLocationName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.addLocationCancelBtn = new FontAwesome.Sharp.IconButton();
-            this.panelSaveLocationBtn = new FontAwesome.Sharp.IconButton();
-            this.updateLocationBtn = new FontAwesome.Sharp.IconButton();
             this.panelAddLocation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -218,6 +219,56 @@ namespace Kaioordinate_BoLiu
             this.panelAddLocation.TabIndex = 87;
             this.panelAddLocation.Visible = false;
             // 
+            // updateLocationBtn
+            // 
+            this.updateLocationBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
+            this.updateLocationBtn.IconColor = System.Drawing.Color.Black;
+            this.updateLocationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.updateLocationBtn.IconSize = 26;
+            this.updateLocationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.updateLocationBtn.Location = new System.Drawing.Point(131, 275);
+            this.updateLocationBtn.Name = "updateLocationBtn";
+            this.updateLocationBtn.Size = new System.Drawing.Size(93, 35);
+            this.updateLocationBtn.TabIndex = 92;
+            this.updateLocationBtn.TabStop = false;
+            this.updateLocationBtn.Text = "Update";
+            this.updateLocationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.updateLocationBtn.UseVisualStyleBackColor = true;
+            this.updateLocationBtn.Click += new System.EventHandler(this.updateLocationBtn_Click);
+            // 
+            // panelSaveLocationBtn
+            // 
+            this.panelSaveLocationBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
+            this.panelSaveLocationBtn.IconColor = System.Drawing.Color.Black;
+            this.panelSaveLocationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.panelSaveLocationBtn.IconSize = 26;
+            this.panelSaveLocationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panelSaveLocationBtn.Location = new System.Drawing.Point(167, 275);
+            this.panelSaveLocationBtn.Name = "panelSaveLocationBtn";
+            this.panelSaveLocationBtn.Size = new System.Drawing.Size(93, 35);
+            this.panelSaveLocationBtn.TabIndex = 91;
+            this.panelSaveLocationBtn.TabStop = false;
+            this.panelSaveLocationBtn.Text = "Save";
+            this.panelSaveLocationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.panelSaveLocationBtn.UseVisualStyleBackColor = true;
+            this.panelSaveLocationBtn.Click += new System.EventHandler(this.panelSaveLocationBtn_Click);
+            // 
+            // addLocationCancelBtn
+            // 
+            this.addLocationCancelBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
+            this.addLocationCancelBtn.IconColor = System.Drawing.Color.Black;
+            this.addLocationCancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.addLocationCancelBtn.IconSize = 26;
+            this.addLocationCancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addLocationCancelBtn.Location = new System.Drawing.Point(293, 275);
+            this.addLocationCancelBtn.Name = "addLocationCancelBtn";
+            this.addLocationCancelBtn.Size = new System.Drawing.Size(93, 35);
+            this.addLocationCancelBtn.TabIndex = 88;
+            this.addLocationCancelBtn.Text = "CANCEL";
+            this.addLocationCancelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addLocationCancelBtn.UseVisualStyleBackColor = true;
+            this.addLocationCancelBtn.Click += new System.EventHandler(this.addLocationCancelBtn_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -255,56 +306,6 @@ namespace Kaioordinate_BoLiu
             this.label2.TabIndex = 87;
             this.label2.Text = "Location Name";
             // 
-            // addLocationCancelBtn
-            // 
-            this.addLocationCancelBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
-            this.addLocationCancelBtn.IconColor = System.Drawing.Color.Black;
-            this.addLocationCancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.addLocationCancelBtn.IconSize = 26;
-            this.addLocationCancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addLocationCancelBtn.Location = new System.Drawing.Point(293, 275);
-            this.addLocationCancelBtn.Name = "addLocationCancelBtn";
-            this.addLocationCancelBtn.Size = new System.Drawing.Size(93, 35);
-            this.addLocationCancelBtn.TabIndex = 88;
-            this.addLocationCancelBtn.Text = "CANCEL";
-            this.addLocationCancelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.addLocationCancelBtn.UseVisualStyleBackColor = true;
-            this.addLocationCancelBtn.Click += new System.EventHandler(this.addLocationCancelBtn_Click);
-            // 
-            // panelSaveLocationBtn
-            // 
-            this.panelSaveLocationBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
-            this.panelSaveLocationBtn.IconColor = System.Drawing.Color.Black;
-            this.panelSaveLocationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.panelSaveLocationBtn.IconSize = 26;
-            this.panelSaveLocationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.panelSaveLocationBtn.Location = new System.Drawing.Point(167, 275);
-            this.panelSaveLocationBtn.Name = "panelSaveLocationBtn";
-            this.panelSaveLocationBtn.Size = new System.Drawing.Size(93, 35);
-            this.panelSaveLocationBtn.TabIndex = 91;
-            this.panelSaveLocationBtn.TabStop = false;
-            this.panelSaveLocationBtn.Text = "Save";
-            this.panelSaveLocationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.panelSaveLocationBtn.UseVisualStyleBackColor = true;
-            this.panelSaveLocationBtn.Click += new System.EventHandler(this.panelSaveLocationBtn_Click);
-            // 
-            // updateLocationBtn
-            // 
-            this.updateLocationBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
-            this.updateLocationBtn.IconColor = System.Drawing.Color.Black;
-            this.updateLocationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.updateLocationBtn.IconSize = 26;
-            this.updateLocationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updateLocationBtn.Location = new System.Drawing.Point(131, 275);
-            this.updateLocationBtn.Name = "updateLocationBtn";
-            this.updateLocationBtn.Size = new System.Drawing.Size(93, 35);
-            this.updateLocationBtn.TabIndex = 92;
-            this.updateLocationBtn.TabStop = false;
-            this.updateLocationBtn.Text = "Update";
-            this.updateLocationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.updateLocationBtn.UseVisualStyleBackColor = true;
-            this.updateLocationBtn.Click += new System.EventHandler(this.updateLocationBtn_Click);
-            // 
             // LocationManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +326,7 @@ namespace Kaioordinate_BoLiu
             this.Controls.Add(this.locationName);
             this.Controls.Add(this.labelFName);
             this.Controls.Add(this.labelWID);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LocationManagementForm";
             this.Text = "Location Management Form";
             this.panelAddLocation.ResumeLayout(false);

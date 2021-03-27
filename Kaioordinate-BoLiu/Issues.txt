@@ -6,7 +6,7 @@
 3. In A1 Task2, para 4 and the list 'The Up, Down, Return, Update and Delete buttons are disabled, and the list should
 disappear ' list disapear or whole box disappear
 
-----------------------
+
 
 4. when updating kai, if event name changes, does it required to create a new event or change previous event name?
 
@@ -19,6 +19,19 @@ may only delete kai that have no event relation” is displayed.
 ??????????????
 
 
-how to show two value for display member => Whanau home
+8. how to show two value for display member => Whanau home
 
-System.Data.DBConcurrencyException: 'Concurrency violation: the DeleteCommand affected 0 of the expected 1 records.'
+9. System.Data.DBConcurrencyException: 'Concurrency violation: the DeleteCommand affected 0 of the expected 1 records.'
+
+10. Kai Preparation Assistant required? in registration event
+
+11. the difference between
+
+if (frmTreatment == null)
+ {
+ frmTreatment = new TreatmentForm(DM, this);
+ }
+ frmTreatment.ShowDialog();
+ what is HELPER? in the page 21/26? the printpreview?
+
+ most secondary form is not use _form . why do i have to pass it in

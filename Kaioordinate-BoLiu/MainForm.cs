@@ -33,7 +33,7 @@ namespace Kaioordinate_BoLiu
 
         private void reportBtn_Click(object sender, EventArgs e)
         {
-            _reportForm = new ReportForm();
+            _reportForm = new ReportForm(_dataModule, this);
             _reportForm.ShowDialog();
         }
 
