@@ -17,3 +17,6 @@ the message “Kai deleted successfully” is displayed.
 7. If the user clicks on the Delete button and the selected kai has an event, then the error message “You 
 may only delete kai that have no event relation” is displayed.
 ??????????????
+
+
+how to show two value for display member => Whanau home
