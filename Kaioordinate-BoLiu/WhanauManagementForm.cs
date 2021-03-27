@@ -204,7 +204,6 @@ namespace Kaioordinate_BoLiu
             {
                 deleteWhanauRow.Delete();
                 _dataModule.UpdateWhanauTable();
-                MessageBox.Show("Whānau deleted successfully", "Succeed");
             }
 
 

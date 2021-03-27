@@ -20,3 +20,5 @@ may only delete kai that have no event relation” is displayed.
 
 
 how to show two value for display member => Whanau home
+
+System.Data.DBConcurrencyException: 'Concurrency violation: the DeleteCommand affected 0 of the expected 1 records.'

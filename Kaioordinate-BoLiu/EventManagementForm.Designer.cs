@@ -351,7 +351,7 @@ namespace Kaioordinate_BoLiu
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(73)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(790, 491);
+            this.ClientSize = new System.Drawing.Size(764, 492);
             this.Controls.Add(this.panelAddEvent);
             this.Controls.Add(this.eventReturnBtn);
             this.Controls.Add(this.eventDeleteBtn);
