@@ -46,10 +46,10 @@ namespace Kaioordinate_BoLiu
         {
             Graphics g = e.Graphics;
             int lineSoFarHeading = 0;
-            Font textFont = new Font("Arial", 10, FontStyle.Regular);
-            Font textFontCenter = new Font("Arial", 10, FontStyle.Regular);
-            Font totalSubtotal = new Font("Arial", 10, FontStyle.Bold);
-            Font headingFont = new Font("Arial", 10, FontStyle.Bold);
+            Font textFont = new Font("Arial", 12, FontStyle.Regular);
+            Font textFontCenter = new Font("Arial", 12, FontStyle.Regular);
+            Font totalSubtotal = new Font("Arial", 12, FontStyle.Bold);
+            Font headingFont = new Font("Arial", 14, FontStyle.Bold);
 
 
             Brush brush = new SolidBrush(Color.Black);
@@ -95,12 +95,14 @@ namespace Kaioordinate_BoLiu
 
             lineSoFarHeading++;
             lineSoFarHeading++;
+            lineSoFarHeading++;
 
             g.DrawString($"Event Name: {item["eventName"]}",
                 headingFont,
                 brush, leftmargin + headingLeftMargin,
                 topMargin + (lineSoFarHeading * textFont.Height));
 
+            lineSoFarHeading++;
             lineSoFarHeading++;
 
             g.DrawString($"Date: {item["eventDate"]}",
@@ -109,12 +111,14 @@ namespace Kaioordinate_BoLiu
                 leftmargin + headingLeftMargin,
                 topMargin + (lineSoFarHeading * textFont.Height));
             lineSoFarHeading++;
+            lineSoFarHeading++;
 
             g.DrawString($"Location: {locationName}",
                 headingFont,
                 brush,
                 leftmargin + headingLeftMargin,
                 topMargin + (lineSoFarHeading * textFont.Height));
+            lineSoFarHeading++;
             lineSoFarHeading++;
 
             g.DrawString($"Address: {locationAddress}",
@@ -123,6 +127,7 @@ namespace Kaioordinate_BoLiu
                 leftmargin + headingLeftMargin,
                 topMargin + (lineSoFarHeading * textFont.Height));
 
+            lineSoFarHeading++;
             lineSoFarHeading++;
             lineSoFarHeading++;
 
@@ -134,13 +139,14 @@ namespace Kaioordinate_BoLiu
 
             lineSoFarHeading++;
             lineSoFarHeading++;
+            lineSoFarHeading++;
 
             var register = _dataModule.EventRegisterTable.Select($"eventId={item["eventID"]}");
 
             if (register.Length == 0)
             {
                 g.DrawString("No attendees at the moment",
-                                  headingFont,
+                                  textFont,
                                   brush,
                                   leftmargin + headingLeftMargin,
                                   topMargin + (lineSoFarHeading * textFont.Height));
@@ -171,12 +177,6 @@ namespace Kaioordinate_BoLiu
 
                     lineSoFarHeading++;
                 }
-
-                lineSoFarHeading++;
-                lineSoFarHeading++;
-                lineSoFarHeading++;
-                lineSoFarHeading++;
-
 
             }
             currentPage++;
