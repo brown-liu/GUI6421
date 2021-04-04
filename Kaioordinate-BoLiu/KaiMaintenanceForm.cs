@@ -114,12 +114,18 @@ namespace Kaioordinate_BoLiu
             newEventRecord["EventName"] = addPanelEventName.Text;
             _dataModule.EventTable.Rows.Add(newEventRecord);
             _dataModule.UpdateEventTable();
+            try {
+                newKaiRecord["EventId"] = newEventRecord["EventId"];
+                newKaiRecord["KaiName"] = addFormKaiName.Text;
+                newKaiRecord["ServeQuantity"] = Int32.Parse(addPanelServingQuantity.Text.ToString());
+                newKaiRecord["PreparationMinutes"] = Int32.Parse(addPanelPreparationTime.Text.ToString());
+                newKaiRecord["PreparationRequired"] = kaiAddCheckBox.Checked;
+            }
+            catch (FormatException) {
+                MessageBox.Show("Please input correct format", "Input error!");
+                return;
+            }
 
-            newKaiRecord["EventId"] = newEventRecord["EventId"];
-            newKaiRecord["KaiName"] = addFormKaiName.Text;
-            newKaiRecord["ServeQuantity"] = Int32.Parse(addPanelServingQuantity.Text.ToString());
-            newKaiRecord["PreparationMinutes"] = Int32.Parse(addPanelPreparationTime.Text.ToString());
-            newKaiRecord["PreparationRequired"] = kaiAddCheckBox.Checked;
 
 
 
