@@ -27,19 +27,22 @@ namespace Kaioordinate_BoLiu
 
             BindControls();
         }
-
+        /// <summary>
+        /// Bind data to components 
+        /// assign currencyManager so can get track of current data used
+        /// </summary>
 
         public void BindControls()
         {
+           
+                    
             _kaiCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "KAI"];
             _eventCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "EVENT"];
 
 
-            //Linking textbox data
+           
             kaiIDdislay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiId");
-
             eventDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Event.EventName");
-
             preparationDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationRequired");
             preparationTimeDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.PreparationMinutes");
             kaiNameDisplay.DataBindings.Add("Text", _dataModule.dataSetKaioordinate, "Kai.KaiName");
@@ -98,6 +101,13 @@ namespace Kaioordinate_BoLiu
             addKaiSaveBtn.Visible = true;
             addKaiCancelBtn.Visible = true;
 
+            
+            addPanelEventName.Text = "";
+            addFormKaiName.Text = "";
+            addPanelServingQuantity.Text = "";
+            addPanelPreparationTime.Text = "";
+            kaiAddCheckBox.Checked = false;
+
         }
 
         private void addKaiSaveBtn_Click(object sender, EventArgs e)
@@ -114,6 +124,7 @@ namespace Kaioordinate_BoLiu
             newEventRecord["EventName"] = addPanelEventName.Text;
             _dataModule.EventTable.Rows.Add(newEventRecord);
             _dataModule.UpdateEventTable();
+
             try {
                 newKaiRecord["EventId"] = newEventRecord["EventId"];
                 newKaiRecord["KaiName"] = addFormKaiName.Text;

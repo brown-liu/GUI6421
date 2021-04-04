@@ -68,6 +68,7 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauReturnBtn
             // 
+            this.whanauReturnBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.whanauReturnBtn.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.whanauReturnBtn.IconColor = System.Drawing.Color.Black;
             this.whanauReturnBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -82,6 +83,7 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauDeleteBtn
             // 
+            this.whanauDeleteBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.whanauDeleteBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.whanauDeleteBtn.IconColor = System.Drawing.Color.Black;
             this.whanauDeleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -96,6 +98,7 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauUpdateBtn
             // 
+            this.whanauUpdateBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.whanauUpdateBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.whanauUpdateBtn.IconColor = System.Drawing.Color.Black;
             this.whanauUpdateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -110,6 +113,7 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauAddBtn
             // 
+            this.whanauAddBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.whanauAddBtn.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.whanauAddBtn.IconColor = System.Drawing.Color.Black;
             this.whanauAddBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -124,6 +128,7 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauDownBtn
             // 
+            this.whanauDownBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.whanauDownBtn.IconChar = FontAwesome.Sharp.IconChar.CaretSquareDown;
             this.whanauDownBtn.IconColor = System.Drawing.Color.Black;
             this.whanauDownBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -138,6 +143,7 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauUpBtn
             // 
+            this.whanauUpBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.whanauUpBtn.IconChar = FontAwesome.Sharp.IconChar.CaretSquareUp;
             this.whanauUpBtn.IconColor = System.Drawing.Color.Black;
             this.whanauUpBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -153,7 +159,7 @@ namespace Kaioordinate_BoLiu
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelEmail.Location = new System.Drawing.Point(336, 166);
             this.labelEmail.Name = "labelEmail";
@@ -163,16 +169,17 @@ namespace Kaioordinate_BoLiu
             // 
             // displayEmail
             // 
+            this.displayEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayEmail.Location = new System.Drawing.Point(444, 165);
             this.displayEmail.Name = "displayEmail";
             this.displayEmail.ReadOnly = true;
-            this.displayEmail.Size = new System.Drawing.Size(231, 20);
+            this.displayEmail.Size = new System.Drawing.Size(231, 29);
             this.displayEmail.TabIndex = 55;
             // 
             // labelLName
             // 
             this.labelLName.AutoSize = true;
-            this.labelLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelLName.Location = new System.Drawing.Point(302, 120);
             this.labelLName.Name = "labelLName";
@@ -182,32 +189,35 @@ namespace Kaioordinate_BoLiu
             // 
             // displayLastName
             // 
+            this.displayLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayLastName.Location = new System.Drawing.Point(445, 123);
             this.displayLastName.Name = "displayLastName";
             this.displayLastName.ReadOnly = true;
-            this.displayLastName.Size = new System.Drawing.Size(230, 20);
+            this.displayLastName.Size = new System.Drawing.Size(230, 29);
             this.displayLastName.TabIndex = 53;
             // 
             // displayWhanauId
             // 
+            this.displayWhanauId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayWhanauId.Location = new System.Drawing.Point(446, 38);
             this.displayWhanauId.Name = "displayWhanauId";
             this.displayWhanauId.ReadOnly = true;
-            this.displayWhanauId.Size = new System.Drawing.Size(228, 20);
+            this.displayWhanauId.Size = new System.Drawing.Size(228, 29);
             this.displayWhanauId.TabIndex = 52;
             // 
             // displayFirstName
             // 
+            this.displayFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayFirstName.Location = new System.Drawing.Point(445, 78);
             this.displayFirstName.Name = "displayFirstName";
             this.displayFirstName.ReadOnly = true;
-            this.displayFirstName.Size = new System.Drawing.Size(228, 20);
+            this.displayFirstName.Size = new System.Drawing.Size(228, 29);
             this.displayFirstName.TabIndex = 51;
             // 
             // labelFName
             // 
             this.labelFName.AutoSize = true;
-            this.labelFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelFName.Location = new System.Drawing.Point(300, 78);
             this.labelFName.Name = "labelFName";
@@ -218,7 +228,7 @@ namespace Kaioordinate_BoLiu
             // labelWID
             // 
             this.labelWID.AutoSize = true;
-            this.labelWID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelWID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelWID.Location = new System.Drawing.Point(304, 38);
             this.labelWID.Name = "labelWID";
@@ -228,17 +238,19 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauListBox
             // 
+            this.whanauListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.whanauListBox.FormattingEnabled = true;
+            this.whanauListBox.ItemHeight = 24;
             this.whanauListBox.Location = new System.Drawing.Point(39, 28);
             this.whanauListBox.Name = "whanauListBox";
-            this.whanauListBox.Size = new System.Drawing.Size(226, 303);
+            this.whanauListBox.Size = new System.Drawing.Size(226, 292);
             this.whanauListBox.TabIndex = 48;
             this.whanauListBox.SelectedIndexChanged += new System.EventHandler(this.whanauListBox_SelectedIndexChanged);
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddress.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelAddress.Location = new System.Drawing.Point(314, 248);
             this.labelAddress.Name = "labelAddress";
@@ -248,6 +260,7 @@ namespace Kaioordinate_BoLiu
             // 
             // displayAddress
             // 
+            this.displayAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayAddress.Location = new System.Drawing.Point(443, 251);
             this.displayAddress.Multiline = true;
             this.displayAddress.Name = "displayAddress";
@@ -258,7 +271,7 @@ namespace Kaioordinate_BoLiu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(335, 205);
             this.label1.Name = "label1";
@@ -268,10 +281,11 @@ namespace Kaioordinate_BoLiu
             // 
             // displayPhone
             // 
+            this.displayPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayPhone.Location = new System.Drawing.Point(444, 205);
             this.displayPhone.Name = "displayPhone";
             this.displayPhone.ReadOnly = true;
-            this.displayPhone.Size = new System.Drawing.Size(231, 20);
+            this.displayPhone.Size = new System.Drawing.Size(231, 29);
             this.displayPhone.TabIndex = 66;
             // 
             // panelAddWhannau
@@ -289,6 +303,7 @@ namespace Kaioordinate_BoLiu
             this.panelAddWhannau.Controls.Add(this.panelAddLastName);
             this.panelAddWhannau.Controls.Add(this.panelAddFirstName);
             this.panelAddWhannau.Controls.Add(this.label6);
+            this.panelAddWhannau.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelAddWhannau.Location = new System.Drawing.Point(294, 22);
             this.panelAddWhannau.Name = "panelAddWhannau";
             this.panelAddWhannau.Size = new System.Drawing.Size(409, 320);
@@ -297,6 +312,7 @@ namespace Kaioordinate_BoLiu
             // 
             // panelUpdateWhanauBtn
             // 
+            this.panelUpdateWhanauBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelUpdateWhanauBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.panelUpdateWhanauBtn.IconColor = System.Drawing.Color.Black;
             this.panelUpdateWhanauBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -307,14 +323,15 @@ namespace Kaioordinate_BoLiu
             this.panelUpdateWhanauBtn.Size = new System.Drawing.Size(92, 35);
             this.panelUpdateWhanauBtn.TabIndex = 80;
             this.panelUpdateWhanauBtn.TabStop = false;
-            this.panelUpdateWhanauBtn.Text = "Update";
+            this.panelUpdateWhanauBtn.Text = "Save";
             this.panelUpdateWhanauBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.panelUpdateWhanauBtn.UseVisualStyleBackColor = true;
             this.panelUpdateWhanauBtn.Click += new System.EventHandler(this.panelUpdateWhanauBtn_Click);
             // 
             // panelCancel
             // 
-            this.panelCancel.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.panelCancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelCancel.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.panelCancel.IconColor = System.Drawing.Color.Black;
             this.panelCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.panelCancel.IconSize = 25;
@@ -330,6 +347,7 @@ namespace Kaioordinate_BoLiu
             // 
             // panelAddWhanauBtn
             // 
+            this.panelAddWhanauBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelAddWhanauBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.panelAddWhanauBtn.IconColor = System.Drawing.Color.Black;
             this.panelAddWhanauBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -359,7 +377,7 @@ namespace Kaioordinate_BoLiu
             // 
             this.panelAddPhone.Location = new System.Drawing.Point(159, 145);
             this.panelAddPhone.Name = "panelAddPhone";
-            this.panelAddPhone.Size = new System.Drawing.Size(231, 20);
+            this.panelAddPhone.Size = new System.Drawing.Size(231, 29);
             this.panelAddPhone.TabIndex = 76;
             // 
             // label3
@@ -396,7 +414,7 @@ namespace Kaioordinate_BoLiu
             // 
             this.panelAddEmail.Location = new System.Drawing.Point(159, 105);
             this.panelAddEmail.Name = "panelAddEmail";
-            this.panelAddEmail.Size = new System.Drawing.Size(231, 20);
+            this.panelAddEmail.Size = new System.Drawing.Size(231, 29);
             this.panelAddEmail.TabIndex = 72;
             // 
             // label5
@@ -414,14 +432,14 @@ namespace Kaioordinate_BoLiu
             // 
             this.panelAddLastName.Location = new System.Drawing.Point(160, 63);
             this.panelAddLastName.Name = "panelAddLastName";
-            this.panelAddLastName.Size = new System.Drawing.Size(230, 20);
+            this.panelAddLastName.Size = new System.Drawing.Size(230, 29);
             this.panelAddLastName.TabIndex = 70;
             // 
             // panelAddFirstName
             // 
             this.panelAddFirstName.Location = new System.Drawing.Point(160, 18);
             this.panelAddFirstName.Name = "panelAddFirstName";
-            this.panelAddFirstName.Size = new System.Drawing.Size(228, 20);
+            this.panelAddFirstName.Size = new System.Drawing.Size(228, 29);
             this.panelAddFirstName.TabIndex = 69;
             // 
             // label6

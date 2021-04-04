@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+/// <summary>
+/// DataModule handles data in and out from each table
+/// </summary>
 namespace Kaioordinate_BoLiu
 {
     public partial class DataModule : Form
@@ -29,6 +31,7 @@ namespace Kaioordinate_BoLiu
         {
             InitializeComponent();
             dataSetKaioordinate.EnforceConstraints = false;
+
             KaiTableAdaptor.Fill(dataSetKaioordinate);
             EventRegistorAdaptor.Fill(dataSetKaioordinate);
             EventAdaptor.Fill(dataSetKaioordinate);
@@ -44,29 +47,14 @@ namespace Kaioordinate_BoLiu
 
             KaiView = new DataView(KaiTable);
             KaiView.Sort = "KaiID";
-
-
-
             EventView = new DataView(EventTable);
             EventView.Sort = "EventID";
-
-
-
             EventRegisterView = new DataView(EventRegisterTable);
             EventRegisterView.Sort = "RegistrationID";
-
-
-
             LocationView = new DataView(LocationTable);
             LocationView.Sort = "LocationID";
-
-
-
             WhanauView = new DataView(WhanauTable);
             WhanauView.Sort = "WhanauID";
-
-
-
 
             dataSetKaioordinate.EnforceConstraints = true;
         }

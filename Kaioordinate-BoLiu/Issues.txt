@@ -1,37 +1,7 @@
 ﻿
-1. in kai form, the data bind has data from event table. Kai table only have event id. how to link ?
-
-2. how to show designer while work on code
-
-3. In A1 Task2, para 4 and the list 'The Up, Down, Return, Update and Delete buttons are disabled, and the list should
-disappear ' list disapear or whole box disappear
 
 
-
-4. when updating kai, if event name changes, does it required to create a new event or change previous event name?
-
-5. all new Kai entry are required to have event name but 
-6. If the user clicks on the Delete button and the selected record has no event, then the user is asked to 
-confirm the deletion – if the user confirms the deletion then the kai is deleted from the database and 
-the message “Kai deleted successfully” is displayed.
-7. If the user clicks on the Delete button and the selected kai has an event, then the error message “You 
-may only delete kai that have no event relation” is displayed.
-??????????????
-
-
-8. how to show two value for display member => Whanau home
-
-9. System.Data.DBConcurrencyException: 'Concurrency violation: the DeleteCommand affected 0 of the expected 1 records.'
-
-10. Kai Preparation Assistant required? in registration event
-
-11. the difference between
-
-if (frmTreatment == null)
- {
- frmTreatment = new TreatmentForm(DM, this);
- }
- frmTreatment.ShowDialog();
- what is HELPER? in the page 21/26? the printpreview?
-
- most secondary form is not use _form . why do i have to pass it in
+1. Kai Page, if delete after add , show concurrency error
+2. Kai add and update ? the box taking numbers only?
+3. registration form can not lnk registrations to events
+4. whanau showing first name and last name

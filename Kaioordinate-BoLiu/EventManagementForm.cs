@@ -107,8 +107,6 @@ namespace Kaioordinate_BoLiu
 
         private void addEventSaveBtn_Click(object sender, EventArgs e)
         {
-
-
             if (string.IsNullOrEmpty(panelAddEventName.Text))
             {
                 MessageBox.Show("Please enter event name", "Idiot control !!!!!!!!!");
@@ -125,8 +123,9 @@ namespace Kaioordinate_BoLiu
             _dataModule.UpdateEventTable();
 
             MessageBox.Show("New event record is now successfully added!", "Succeed");
-            addEventCancelBtn_Click( sender, e);
+            addEventCancelBtn_Click(sender, e);
         }
+
 
         private void eventUpdateBtn_Click(object sender, EventArgs e)
         {
@@ -138,12 +137,22 @@ namespace Kaioordinate_BoLiu
             panelAddEventSaveBtn.Visible = false;
 
             var updateEventRecord = _dataModule.EventTable.Rows[_eventCurrencyManager.Position];
-          panelAddEventName.Text=  updateEventRecord["eventName"].ToString()  ;
-          comboBoxLocations.SelectedValue = updateEventRecord["locationId"]  ;
-          eventDatePicker.Value =(DateTime) updateEventRecord["EventDate"] ;
-
-
+            panelAddEventName.Text = updateEventRecord["eventName"].ToString();
+            comboBoxLocations.SelectedValue = updateEventRecord["locationId"];
+            try
+            {
+                eventDatePicker.Value = (DateTime)updateEventRecord["EventDate"];
+            }
+            catch (StrongTypingException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (InvalidCastException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
+
 
         private void panelUpdateEvent_Click(object sender, EventArgs e)
         {
@@ -172,7 +181,7 @@ namespace Kaioordinate_BoLiu
             DataRow deleteEventRow = _dataModule.EventTable.Rows[_eventCurrencyManager.Position];
 
             var id = deleteEventRow["EventId"].ToString();
-            DataRow[] anyKaiRow = _dataModule.KaiTable.Select("EventId ="+id);
+            DataRow[] anyKaiRow = _dataModule.KaiTable.Select("EventId =" + id);
 
             if (anyKaiRow.Length != 0)
             {

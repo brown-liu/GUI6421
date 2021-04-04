@@ -54,6 +54,7 @@ namespace Kaioordinate_BoLiu
             // 
             // kai
             // 
+            this.kai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kai.IconChar = FontAwesome.Sharp.IconChar.DrumstickBite;
             this.kai.IconColor = System.Drawing.Color.Black;
             this.kai.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -69,6 +70,7 @@ namespace Kaioordinate_BoLiu
             // 
             // eventBtn
             // 
+            this.eventBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventBtn.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
             this.eventBtn.IconColor = System.Drawing.Color.Black;
             this.eventBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -84,7 +86,8 @@ namespace Kaioordinate_BoLiu
             // 
             // whanauBtn
             // 
-            this.whanauBtn.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.whanauBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whanauBtn.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.whanauBtn.IconColor = System.Drawing.Color.Black;
             this.whanauBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.whanauBtn.IconSize = 60;
@@ -99,7 +102,8 @@ namespace Kaioordinate_BoLiu
             // 
             // locationBtn
             // 
-            this.locationBtn.IconChar = FontAwesome.Sharp.IconChar.MapMarkerAlt;
+            this.locationBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationBtn.IconChar = FontAwesome.Sharp.IconChar.MapMarkedAlt;
             this.locationBtn.IconColor = System.Drawing.Color.Black;
             this.locationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.locationBtn.IconSize = 60;
@@ -114,6 +118,7 @@ namespace Kaioordinate_BoLiu
             // 
             // registBtn
             // 
+            this.registBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registBtn.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
             this.registBtn.IconColor = System.Drawing.Color.Black;
             this.registBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -129,6 +134,7 @@ namespace Kaioordinate_BoLiu
             // 
             // reportBtn
             // 
+            this.reportBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportBtn.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.reportBtn.IconColor = System.Drawing.Color.Black;
             this.reportBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -144,6 +150,7 @@ namespace Kaioordinate_BoLiu
             // 
             // homeExistBtn
             // 
+            this.homeExistBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeExistBtn.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.homeExistBtn.IconColor = System.Drawing.Color.Black;
             this.homeExistBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;

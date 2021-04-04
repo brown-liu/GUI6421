@@ -38,12 +38,13 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiDownBtn
             // 
-            this.kaiDownBtn.IconChar = FontAwesome.Sharp.IconChar.CaretSquareDown;
+            this.kaiDownBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kaiDownBtn.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.kaiDownBtn.IconColor = System.Drawing.Color.Black;
             this.kaiDownBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.kaiDownBtn.Location = new System.Drawing.Point(83, 58);
             this.kaiDownBtn.Name = "kaiDownBtn";
-            this.kaiDownBtn.Size = new System.Drawing.Size(113, 100);
+            this.kaiDownBtn.Size = new System.Drawing.Size(121, 113);
             this.kaiDownBtn.TabIndex = 17;
             this.kaiDownBtn.Text = "GENERATE REPORT";
             this.kaiDownBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -52,12 +53,13 @@ namespace Kaioordinate_BoLiu
             // 
             // iconButton1
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CaretSquareDown;
+            this.iconButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.Location = new System.Drawing.Point(245, 58);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(113, 100);
+            this.iconButton1.Size = new System.Drawing.Size(121, 113);
             this.iconButton1.TabIndex = 18;
             this.iconButton1.Text = "RETURN";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

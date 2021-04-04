@@ -67,17 +67,19 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiMaintinanceListBox
             // 
+            this.kaiMaintinanceListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiMaintinanceListBox.FormattingEnabled = true;
+            this.kaiMaintinanceListBox.ItemHeight = 24;
             this.kaiMaintinanceListBox.Location = new System.Drawing.Point(39, 45);
             this.kaiMaintinanceListBox.Name = "kaiMaintinanceListBox";
-            this.kaiMaintinanceListBox.Size = new System.Drawing.Size(193, 264);
+            this.kaiMaintinanceListBox.Size = new System.Drawing.Size(193, 244);
             this.kaiMaintinanceListBox.TabIndex = 0;
             this.kaiMaintinanceListBox.SelectedIndexChanged += new System.EventHandler(this.kaiMaintinanceListBox_SelectedIndexChanged);
             // 
             // labelKaiId
             // 
             this.labelKaiId.AutoSize = true;
-            this.labelKaiId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelKaiId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKaiId.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKaiId.Location = new System.Drawing.Point(357, 52);
             this.labelKaiId.Name = "labelKaiId";
@@ -88,7 +90,7 @@ namespace Kaioordinate_BoLiu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(357, 97);
             this.label2.Name = "label2";
@@ -99,7 +101,7 @@ namespace Kaioordinate_BoLiu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(327, 138);
             this.label3.Name = "label3";
@@ -109,48 +111,53 @@ namespace Kaioordinate_BoLiu
             // 
             // eventDisplay
             // 
+            this.eventDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventDisplay.Location = new System.Drawing.Point(456, 97);
             this.eventDisplay.Name = "eventDisplay";
             this.eventDisplay.ReadOnly = true;
-            this.eventDisplay.Size = new System.Drawing.Size(148, 20);
+            this.eventDisplay.Size = new System.Drawing.Size(148, 29);
             this.eventDisplay.TabIndex = 5;
             // 
             // kaiNameDisplay
             // 
+            this.kaiNameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiNameDisplay.Location = new System.Drawing.Point(456, 143);
             this.kaiNameDisplay.Name = "kaiNameDisplay";
             this.kaiNameDisplay.ReadOnly = true;
-            this.kaiNameDisplay.Size = new System.Drawing.Size(148, 20);
+            this.kaiNameDisplay.Size = new System.Drawing.Size(148, 29);
             this.kaiNameDisplay.TabIndex = 6;
             // 
             // kaiIDdislay
             // 
+            this.kaiIDdislay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiIDdislay.Location = new System.Drawing.Point(456, 52);
             this.kaiIDdislay.Name = "kaiIDdislay";
             this.kaiIDdislay.ReadOnly = true;
-            this.kaiIDdislay.Size = new System.Drawing.Size(148, 20);
+            this.kaiIDdislay.Size = new System.Drawing.Size(148, 29);
             this.kaiIDdislay.TabIndex = 7;
             // 
             // preparationDisplay
             // 
+            this.preparationDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preparationDisplay.Location = new System.Drawing.Point(456, 192);
             this.preparationDisplay.Name = "preparationDisplay";
             this.preparationDisplay.ReadOnly = true;
-            this.preparationDisplay.Size = new System.Drawing.Size(148, 20);
+            this.preparationDisplay.Size = new System.Drawing.Size(148, 29);
             this.preparationDisplay.TabIndex = 8;
             // 
             // preparationTimeDisplay
             // 
+            this.preparationTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preparationTimeDisplay.Location = new System.Drawing.Point(456, 242);
             this.preparationTimeDisplay.Name = "preparationTimeDisplay";
             this.preparationTimeDisplay.ReadOnly = true;
-            this.preparationTimeDisplay.Size = new System.Drawing.Size(148, 20);
+            this.preparationTimeDisplay.Size = new System.Drawing.Size(148, 29);
             this.preparationTimeDisplay.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(313, 189);
             this.label4.Name = "label4";
@@ -161,7 +168,7 @@ namespace Kaioordinate_BoLiu
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(265, 237);
             this.label5.Name = "label5";
@@ -171,16 +178,17 @@ namespace Kaioordinate_BoLiu
             // 
             // serveQuantityDisplay
             // 
+            this.serveQuantityDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serveQuantityDisplay.Location = new System.Drawing.Point(456, 289);
             this.serveQuantityDisplay.Name = "serveQuantityDisplay";
             this.serveQuantityDisplay.ReadOnly = true;
-            this.serveQuantityDisplay.Size = new System.Drawing.Size(148, 20);
+            this.serveQuantityDisplay.Size = new System.Drawing.Size(148, 29);
             this.serveQuantityDisplay.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(272, 284);
             this.label6.Name = "label6";
@@ -190,6 +198,7 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiUpBtn
             // 
+            this.kaiUpBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiUpBtn.IconChar = FontAwesome.Sharp.IconChar.CaretSquareUp;
             this.kaiUpBtn.IconColor = System.Drawing.Color.Black;
             this.kaiUpBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -204,6 +213,7 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiDownBtn
             // 
+            this.kaiDownBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiDownBtn.IconChar = FontAwesome.Sharp.IconChar.CaretSquareDown;
             this.kaiDownBtn.IconColor = System.Drawing.Color.Black;
             this.kaiDownBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -218,6 +228,7 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiAddBtn
             // 
+            this.kaiAddBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiAddBtn.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.kaiAddBtn.IconColor = System.Drawing.Color.Black;
             this.kaiAddBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -232,6 +243,7 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiUpdateBtn
             // 
+            this.kaiUpdateBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiUpdateBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.kaiUpdateBtn.IconColor = System.Drawing.Color.Black;
             this.kaiUpdateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -246,6 +258,7 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiDeleteBtn
             // 
+            this.kaiDeleteBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiDeleteBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.kaiDeleteBtn.IconColor = System.Drawing.Color.Black;
             this.kaiDeleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -260,6 +273,7 @@ namespace Kaioordinate_BoLiu
             // 
             // kaiReturnBtn
             // 
+            this.kaiReturnBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kaiReturnBtn.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.kaiReturnBtn.IconColor = System.Drawing.Color.Black;
             this.kaiReturnBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -274,6 +288,7 @@ namespace Kaioordinate_BoLiu
             // 
             // addKaiSaveBtn
             // 
+            this.addKaiSaveBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addKaiSaveBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.addKaiSaveBtn.IconColor = System.Drawing.Color.Black;
             this.addKaiSaveBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -281,7 +296,7 @@ namespace Kaioordinate_BoLiu
             this.addKaiSaveBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addKaiSaveBtn.Location = new System.Drawing.Point(432, 337);
             this.addKaiSaveBtn.Name = "addKaiSaveBtn";
-            this.addKaiSaveBtn.Size = new System.Drawing.Size(92, 35);
+            this.addKaiSaveBtn.Size = new System.Drawing.Size(100, 35);
             this.addKaiSaveBtn.TabIndex = 20;
             this.addKaiSaveBtn.Text = "SAVE";
             this.addKaiSaveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -291,14 +306,15 @@ namespace Kaioordinate_BoLiu
             // 
             // addKaiCancelBtn
             // 
-            this.addKaiCancelBtn.IconChar = FontAwesome.Sharp.IconChar.Cross;
+            this.addKaiCancelBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addKaiCancelBtn.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.addKaiCancelBtn.IconColor = System.Drawing.Color.Black;
             this.addKaiCancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addKaiCancelBtn.IconSize = 26;
             this.addKaiCancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addKaiCancelBtn.Location = new System.Drawing.Point(559, 337);
             this.addKaiCancelBtn.Name = "addKaiCancelBtn";
-            this.addKaiCancelBtn.Size = new System.Drawing.Size(93, 35);
+            this.addKaiCancelBtn.Size = new System.Drawing.Size(101, 35);
             this.addKaiCancelBtn.TabIndex = 21;
             this.addKaiCancelBtn.Text = "CANCEL";
             this.addKaiCancelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -318,6 +334,7 @@ namespace Kaioordinate_BoLiu
             this.addKaiPanel.Controls.Add(this.addPanelPreparationTime);
             this.addKaiPanel.Controls.Add(this.addPanelEventName);
             this.addKaiPanel.Controls.Add(this.addFormKaiName);
+            this.addKaiPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addKaiPanel.Location = new System.Drawing.Point(266, 36);
             this.addKaiPanel.Name = "addKaiPanel";
             this.addKaiPanel.Size = new System.Drawing.Size(376, 295);
@@ -348,7 +365,7 @@ namespace Kaioordinate_BoLiu
             // 
             this.addPanelServingQuantity.Location = new System.Drawing.Point(211, 227);
             this.addPanelServingQuantity.Name = "addPanelServingQuantity";
-            this.addPanelServingQuantity.Size = new System.Drawing.Size(148, 20);
+            this.addPanelServingQuantity.Size = new System.Drawing.Size(148, 29);
             this.addPanelServingQuantity.TabIndex = 31;
             // 
             // label8
@@ -399,25 +416,26 @@ namespace Kaioordinate_BoLiu
             // 
             this.addPanelPreparationTime.Location = new System.Drawing.Point(211, 180);
             this.addPanelPreparationTime.Name = "addPanelPreparationTime";
-            this.addPanelPreparationTime.Size = new System.Drawing.Size(148, 20);
+            this.addPanelPreparationTime.Size = new System.Drawing.Size(148, 29);
             this.addPanelPreparationTime.TabIndex = 28;
             // 
             // addPanelEventName
             // 
             this.addPanelEventName.Location = new System.Drawing.Point(211, 35);
             this.addPanelEventName.Name = "addPanelEventName";
-            this.addPanelEventName.Size = new System.Drawing.Size(148, 20);
+            this.addPanelEventName.Size = new System.Drawing.Size(148, 29);
             this.addPanelEventName.TabIndex = 25;
             // 
             // addFormKaiName
             // 
             this.addFormKaiName.Location = new System.Drawing.Point(211, 81);
             this.addFormKaiName.Name = "addFormKaiName";
-            this.addFormKaiName.Size = new System.Drawing.Size(148, 20);
+            this.addFormKaiName.Size = new System.Drawing.Size(148, 29);
             this.addFormKaiName.TabIndex = 26;
             // 
             // updateKaiBtn
             // 
+            this.updateKaiBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateKaiBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.updateKaiBtn.IconColor = System.Drawing.Color.Black;
             this.updateKaiBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -425,7 +443,7 @@ namespace Kaioordinate_BoLiu
             this.updateKaiBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.updateKaiBtn.Location = new System.Drawing.Point(417, 337);
             this.updateKaiBtn.Name = "updateKaiBtn";
-            this.updateKaiBtn.Size = new System.Drawing.Size(92, 35);
+            this.updateKaiBtn.Size = new System.Drawing.Size(100, 35);
             this.updateKaiBtn.TabIndex = 23;
             this.updateKaiBtn.Text = "Update";
             this.updateKaiBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

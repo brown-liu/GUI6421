@@ -23,7 +23,7 @@ namespace Kaioordinate_BoLiu
 
             _eventCurrencyManager=(CurrencyManager) this.BindingContext[_dataModule.dataSetKaioordinate,"event"];
             _whanauCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "whanau"];
-            _registrationCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "eventRegister"];
+           _registrationCurrencyManager = (CurrencyManager)this.BindingContext[_dataModule.dataSetKaioordinate, "eventRegister"];
 
             dataGridViewEvent.DataSource = _dataModule.dataSetKaioordinate;
             dataGridViewEvent.DataMember = "event";
@@ -78,6 +78,13 @@ namespace Kaioordinate_BoLiu
                 _dataModule.UpdateEventRegisterTable();
             }
 
+        }
+
+        private void dataGridViewEvent_SelectionChanged(object sender, EventArgs e)
+        {
+            var eventId = _dataModule.EventTable.Rows[_eventCurrencyManager.Position]["EventId"];
+
+            _registrationCurrencyManager.Position = _dataModule.EventRegisterView.Find(eventId);
         }
     }
 }
