@@ -1,7 +1,7 @@
 ﻿
 
 
-1. Kai Page, if delete after add , show concurrency error
+1. Kai Page, if delete after add , show concurrency error DONE
 2. Kai add and update ? the box taking numbers only?
 3. registration form can not lnk registrations to events
 4. whanau showing first name and last name

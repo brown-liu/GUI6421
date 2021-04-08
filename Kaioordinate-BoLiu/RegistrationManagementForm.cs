@@ -32,7 +32,7 @@ namespace Kaioordinate_BoLiu
             dataGridViewWhanau.DataMember = "whanau";
 
             dataGridViewRegistrations.DataSource = _dataModule.dataSetKaioordinate;
-            dataGridViewRegistrations.DataMember = "eventRegister";
+            dataGridViewRegistrations.DataMember = "event.FK_EVENT_EVENTREGISTER";
         }
 
         private void locationReturnBtn_Click(object sender, EventArgs e)

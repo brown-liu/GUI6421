@@ -55,7 +55,7 @@ namespace Kaioordinate_BoLiu
             this.label1.Location = new System.Drawing.Point(185, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 24);
+            this.label1.Size = new System.Drawing.Size(136, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Events";
             // 
@@ -67,7 +67,7 @@ namespace Kaioordinate_BoLiu
             this.label2.Location = new System.Drawing.Point(638, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 24);
+            this.label2.Size = new System.Drawing.Size(161, 44);
             this.label2.TabIndex = 1;
             this.label2.Text = "Whanau";
             // 
@@ -79,7 +79,7 @@ namespace Kaioordinate_BoLiu
             this.label3.Location = new System.Drawing.Point(135, 293);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 24);
+            this.label3.Size = new System.Drawing.Size(243, 44);
             this.label3.TabIndex = 2;
             this.label3.Text = "Registrations";
             // 
@@ -144,7 +144,7 @@ namespace Kaioordinate_BoLiu
             this.checkBoxRegistrationHome.Location = new System.Drawing.Point(485, 323);
             this.checkBoxRegistrationHome.Margin = new System.Windows.Forms.Padding(6);
             this.checkBoxRegistrationHome.Name = "checkBoxRegistrationHome";
-            this.checkBoxRegistrationHome.Size = new System.Drawing.Size(234, 28);
+            this.checkBoxRegistrationHome.Size = new System.Drawing.Size(479, 48);
             this.checkBoxRegistrationHome.TabIndex = 89;
             this.checkBoxRegistrationHome.Text = "Kai Preparation Assistant";
             this.checkBoxRegistrationHome.UseVisualStyleBackColor = true;
@@ -156,6 +156,7 @@ namespace Kaioordinate_BoLiu
             this.dataGridViewEvent.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewEvent.Name = "dataGridViewEvent";
             this.dataGridViewEvent.ReadOnly = true;
+            this.dataGridViewEvent.RowHeadersWidth = 82;
             this.dataGridViewEvent.Size = new System.Drawing.Size(418, 248);
             this.dataGridViewEvent.TabIndex = 90;
             this.dataGridViewEvent.SelectionChanged += new System.EventHandler(this.dataGridViewEvent_SelectionChanged);
@@ -167,6 +168,7 @@ namespace Kaioordinate_BoLiu
             this.dataGridViewRegistrations.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewRegistrations.Name = "dataGridViewRegistrations";
             this.dataGridViewRegistrations.ReadOnly = true;
+            this.dataGridViewRegistrations.RowHeadersWidth = 82;
             this.dataGridViewRegistrations.Size = new System.Drawing.Size(418, 261);
             this.dataGridViewRegistrations.TabIndex = 91;
             // 
@@ -177,15 +179,16 @@ namespace Kaioordinate_BoLiu
             this.dataGridViewWhanau.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewWhanau.Name = "dataGridViewWhanau";
             this.dataGridViewWhanau.ReadOnly = true;
+            this.dataGridViewWhanau.RowHeadersWidth = 82;
             this.dataGridViewWhanau.Size = new System.Drawing.Size(409, 248);
             this.dataGridViewWhanau.TabIndex = 92;
             // 
             // RegistrationManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 44F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(73)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(928, 602);
+            this.ClientSize = new System.Drawing.Size(1369, 1027);
             this.Controls.Add(this.dataGridViewWhanau);
             this.Controls.Add(this.dataGridViewRegistrations);
             this.Controls.Add(this.dataGridViewEvent);

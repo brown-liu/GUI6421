@@ -34,6 +34,8 @@ namespace Kaioordinate_BoLiu {
         
         private WHANAUDataTable tableWHANAU;
         
+        private global::System.Data.DataRelation relationFK_EVENT_EVENTREGISTER;
+        
         private global::System.Data.DataRelation relationFK_EVENT_KAI;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -292,6 +294,7 @@ namespace Kaioordinate_BoLiu {
                     this.tableWHANAU.InitVars();
                 }
             }
+            this.relationFK_EVENT_EVENTREGISTER = this.Relations["FK_EVENT_EVENTREGISTER"];
             this.relationFK_EVENT_KAI = this.Relations["FK_EVENT_KAI"];
         }
         
@@ -314,6 +317,13 @@ namespace Kaioordinate_BoLiu {
             this.tableWHANAU = new WHANAUDataTable();
             base.Tables.Add(this.tableWHANAU);
             global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_EVENT_EVENTREGISTER", new global::System.Data.DataColumn[] {
+                        this.tableEVENT.EventIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableEVENTREGISTER.EventIDColumn});
+            this.tableEVENTREGISTER.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_EVENT_KAI", new global::System.Data.DataColumn[] {
                         this.tableEVENT.EventIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableKAI.EventIDColumn});
@@ -321,6 +331,10 @@ namespace Kaioordinate_BoLiu {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
+            this.relationFK_EVENT_EVENTREGISTER = new global::System.Data.DataRelation("FK_EVENT_EVENTREGISTER", new global::System.Data.DataColumn[] {
+                        this.tableEVENT.EventIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableEVENTREGISTER.EventIDColumn}, false);
+            this.Relations.Add(this.relationFK_EVENT_EVENTREGISTER);
             this.relationFK_EVENT_KAI = new global::System.Data.DataRelation("FK_EVENT_KAI", new global::System.Data.DataColumn[] {
                         this.tableEVENT.EventIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableKAI.EventIDColumn}, false);
@@ -846,13 +860,16 @@ namespace Kaioordinate_BoLiu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EVENTREGISTERRow AddEVENTREGISTERRow(int WhanauID, int EventID, bool KaiPreparation) {
+            public EVENTREGISTERRow AddEVENTREGISTERRow(int WhanauID, EVENTRow parentEVENTRowByFK_EVENT_EVENTREGISTER, bool KaiPreparation) {
                 EVENTREGISTERRow rowEVENTREGISTERRow = ((EVENTREGISTERRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         WhanauID,
-                        EventID,
+                        null,
                         KaiPreparation};
+                if ((parentEVENTRowByFK_EVENT_EVENTREGISTER != null)) {
+                    columnValuesArray[2] = parentEVENTRowByFK_EVENT_EVENTREGISTER[0];
+                }
                 rowEVENTREGISTERRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEVENTREGISTERRow);
                 return rowEVENTREGISTERRow;
@@ -2098,6 +2115,17 @@ namespace Kaioordinate_BoLiu {
                     return ((KAIRow[])(base.GetChildRows(this.Table.ChildRelations["FK_EVENT_KAI"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EVENTREGISTERRow[] GetEVENTREGISTERRows() {
+                if ((this.Table.ChildRelations["FK_EVENT_EVENTREGISTER"] == null)) {
+                    return new EVENTREGISTERRow[0];
+                }
+                else {
+                    return ((EVENTREGISTERRow[])(base.GetChildRows(this.Table.ChildRelations["FK_EVENT_EVENTREGISTER"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2170,6 +2198,17 @@ namespace Kaioordinate_BoLiu {
                 }
                 set {
                     this[this.tableEVENTREGISTER.KaiPreparationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EVENTRow EVENTRow {
+                get {
+                    return ((EVENTRow)(this.GetParentRow(this.Table.ParentRelations["FK_EVENT_EVENTREGISTER"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_EVENT_EVENTREGISTER"]);
                 }
             }
             

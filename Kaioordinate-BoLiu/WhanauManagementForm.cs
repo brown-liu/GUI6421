@@ -208,5 +208,14 @@ namespace Kaioordinate_BoLiu
 
 
         }
+
+        private void whanauListBox_Format(object sender, ListControlConvertEventArgs e)
+        {
+            DataRow dr = ((DataRowView)e.ListItem).Row;
+            string fName = dr["firstName"].ToString();
+            string lName = dr["lastName"].ToString();
+
+            e.Value = fName + " " + lName;
+        }
     }
 }
