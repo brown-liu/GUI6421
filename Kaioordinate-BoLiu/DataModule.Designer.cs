@@ -120,6 +120,7 @@ namespace Kaioordinate_BoLiu
                         new System.Data.Common.DataColumnMapping("LocationID", "LocationID"),
                         new System.Data.Common.DataColumnMapping("EventDate", "EventDate")})});
             this.EventAdaptor.UpdateCommand = this.oleDbUpdateCommand1;
+            this.EventAdaptor.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.EventAdaptor_RowUpdated);
             // 
             // oleDbSelectCommand2
             // 
@@ -192,6 +193,7 @@ namespace Kaioordinate_BoLiu
                         new System.Data.Common.DataColumnMapping("PreparationMinutes", "PreparationMinutes"),
                         new System.Data.Common.DataColumnMapping("ServeQuantity", "ServeQuantity")})});
             this.KaiTableAdaptor.UpdateCommand = this.oleDbUpdateCommand2;
+            this.KaiTableAdaptor.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.KaiTableAdaptor_RowUpdated);
             // 
             // oleDbSelectCommand3
             // 
@@ -250,6 +252,7 @@ namespace Kaioordinate_BoLiu
                         new System.Data.Common.DataColumnMapping("EventID", "EventID"),
                         new System.Data.Common.DataColumnMapping("KaiPreparation", "KaiPreparation")})});
             this.EventRegistorAdaptor.UpdateCommand = this.oleDbUpdateCommand3;
+            this.EventRegistorAdaptor.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.EventRegistorAdaptor_RowUpdated);
             // 
             // oleDbSelectCommand4
             // 
@@ -302,6 +305,7 @@ namespace Kaioordinate_BoLiu
                         new System.Data.Common.DataColumnMapping("LocationName", "LocationName"),
                         new System.Data.Common.DataColumnMapping("Address", "Address")})});
             this.LocationAdaptor.UpdateCommand = this.oleDbUpdateCommand4;
+            this.LocationAdaptor.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.LocationAdaptor_RowUpdated);
             // 
             // oleDbSelectCommand5
             // 
@@ -374,6 +378,7 @@ namespace Kaioordinate_BoLiu
                         new System.Data.Common.DataColumnMapping("Phone", "Phone"),
                         new System.Data.Common.DataColumnMapping("Address", "Address")})});
             this.WhanauAdapter.UpdateCommand = this.oleDbUpdateCommand5;
+            this.WhanauAdapter.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.WhanauAdapter_RowUpdated);
             // 
             // dataSetKaioordinate
             // 

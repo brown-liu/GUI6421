@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 /// <summary>
 /// DataModule handles data in and out from each table
@@ -92,6 +93,76 @@ namespace Kaioordinate_BoLiu
         public void UpdateWhanauTable()
         {
             WhanauAdapter.Update(WhanauTable);
+        }
+
+        private void EventAdaptor_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newId = 0;
+
+            OleDbCommand idCMD = new OleDbCommand("SELECT  @@IDENTITY", oleDbConnection1);
+
+            if (e.StatementType == StatementType.Insert)
+            {
+                newId = (int)idCMD.ExecuteScalar();
+                e.Row["EventID"] = newId;
+
+            }
+        }
+
+        private void KaiTableAdaptor_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newId = 0;
+
+            OleDbCommand idCMD = new OleDbCommand("SELECT  @@IDENTITY", oleDbConnection1);
+
+            if (e.StatementType == StatementType.Insert)
+            {
+                newId = (int)idCMD.ExecuteScalar();
+                e.Row["KaiID"] = newId;
+
+            }
+        }
+
+        private void EventRegistorAdaptor_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newId = 0;
+
+            OleDbCommand idCMD = new OleDbCommand("SELECT  @@IDENTITY", oleDbConnection1);
+
+            if (e.StatementType == StatementType.Insert)
+            {
+                newId = (int)idCMD.ExecuteScalar();
+                e.Row["RegistrationID"] = newId;
+
+            }
+        }
+
+        private void LocationAdaptor_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newId = 0;
+
+            OleDbCommand idCMD = new OleDbCommand("SELECT  @@IDENTITY", oleDbConnection1);
+
+            if (e.StatementType == StatementType.Insert)
+            {
+                newId = (int)idCMD.ExecuteScalar();
+                e.Row["LocationID"] = newId;
+
+            }
+        }
+
+        private void WhanauAdapter_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newId = 0;
+
+            OleDbCommand idCMD = new OleDbCommand("SELECT  @@IDENTITY", oleDbConnection1);
+
+            if (e.StatementType == StatementType.Insert)
+            {
+                newId = (int)idCMD.ExecuteScalar();
+                e.Row["WhanauID"] = newId;
+
+            }
         }
     }
 }
